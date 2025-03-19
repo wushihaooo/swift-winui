@@ -2,12 +2,11 @@
   "swift-winrt": "0.5.0",
   "project": "WinUI",
   "package": {
-    "id": "Microsoft.WindowsAppSDK",
-    "version": "1.7.250208002-preview1"
+    "id": "Microsoft.WindowsAppSDK", "version": "1.7.250310001"
   },
   "dependencies": [
     { "id": "Microsoft.Windows.SDK.Contracts", "version": "10.0.18362.2007" },
-    { "id": "Microsoft.Web.WebView2", "version": "1.0.3065.39" }
+    { "id": "Microsoft.Web.WebView2", "version": "1.0.3124.44" }
   ],
   "include": [
     "Microsoft.UI.Xaml.Application",
