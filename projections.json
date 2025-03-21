@@ -65,6 +65,7 @@
     "Microsoft.UI.Xaml.Controls.ToolTipService",
     "Microsoft.UI.Xaml.Controls.TextBlock",
     "Microsoft.UI.Xaml.Controls.TextBox",
+    "Microsoft.UI.Xaml.Controls.TitleBar",
     "Microsoft.UI.Xaml.Controls.ToggleSwitch",
     "Microsoft.UI.Xaml.Controls.TreeView",
     "Microsoft.UI.Xaml.Controls.TreeViewItem",

@@ -1016,6 +1016,14 @@ fileprivate func makeTextControlPasteEventArgsFrom(abi: WindowsFoundation.IInspe
     return TextControlPasteEventArgs(fromAbi: abi)
 }
 
+fileprivate func makeTitleBarFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return TitleBar(fromAbi: abi)
+}
+
+fileprivate func makeTitleBarTemplateSettingsFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return TitleBarTemplateSettings(fromAbi: abi)
+}
+
 fileprivate func makeToggleMenuFlyoutItemFrom(abi: WindowsFoundation.IInspectable) -> Any {
     return ToggleMenuFlyoutItem(fromAbi: abi)
 }
@@ -2287,6 +2295,8 @@ public class __MakeFromAbi: MakeFromAbi {
             case "TextControlCopyingToClipboardEventArgs": return makeTextControlCopyingToClipboardEventArgsFrom(abi: abi)
             case "TextControlCuttingToClipboardEventArgs": return makeTextControlCuttingToClipboardEventArgsFrom(abi: abi)
             case "TextControlPasteEventArgs": return makeTextControlPasteEventArgsFrom(abi: abi)
+            case "TitleBar": return makeTitleBarFrom(abi: abi)
+            case "TitleBarTemplateSettings": return makeTitleBarTemplateSettingsFrom(abi: abi)
             case "ToggleMenuFlyoutItem": return makeToggleMenuFlyoutItemFrom(abi: abi)
             case "ToggleSwitch": return makeToggleSwitchFrom(abi: abi)
             case "ToolTip": return makeToolTipFrom(abi: abi)

@@ -18183,6 +18183,270 @@ public final class TextControlPasteEventArgs : WinRTClass {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar)
+open class TitleBar : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITitleBar
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar>?) -> TitleBar? {
+        guard let abi = abi else { return nil }
+        return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITitleBarFactory : __ABI_Microsoft_UI_Xaml_Controls.ITitleBarFactory =  try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.TitleBar"))
+
+    override public init() {
+        super.init(composing: Self.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITitleBarFactory.CreateInstanceImpl(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITitleBarStatics: __ABI_Microsoft_UI_Xaml_Controls.ITitleBarStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.TitleBar"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.contentproperty)
+    public class var contentProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_ContentPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.iconsourceproperty)
+    public class var iconSourceProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_IconSourcePropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.isbackbuttonenabledproperty)
+    public class var isBackButtonEnabledProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_IsBackButtonEnabledPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.isbackbuttonvisibleproperty)
+    public class var isBackButtonVisibleProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_IsBackButtonVisiblePropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.ispanetogglebuttonvisibleproperty)
+    public class var isPaneToggleButtonVisibleProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_IsPaneToggleButtonVisiblePropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.leftheaderproperty)
+    public class var leftHeaderProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_LeftHeaderPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.rightheaderproperty)
+    public class var rightHeaderProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_RightHeaderPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.subtitleproperty)
+    public class var subtitleProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_SubtitlePropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.templatesettingsproperty)
+    public class var templateSettingsProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_TemplateSettingsPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.titleproperty)
+    public class var titleProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarStatics.get_TitlePropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.content)
+    public var content : WinUI.UIElement! {
+        get { try! _default.get_ContentImpl() }
+        set { try! _default.put_ContentImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.iconsource)
+    public var iconSource : IconSource! {
+        get { try! _default.get_IconSourceImpl() }
+        set { try! _default.put_IconSourceImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.isbackbuttonenabled)
+    public var isBackButtonEnabled : Bool {
+        get { try! _default.get_IsBackButtonEnabledImpl() }
+        set { try! _default.put_IsBackButtonEnabledImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.isbackbuttonvisible)
+    public var isBackButtonVisible : Bool {
+        get { try! _default.get_IsBackButtonVisibleImpl() }
+        set { try! _default.put_IsBackButtonVisibleImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.ispanetogglebuttonvisible)
+    public var isPaneToggleButtonVisible : Bool {
+        get { try! _default.get_IsPaneToggleButtonVisibleImpl() }
+        set { try! _default.put_IsPaneToggleButtonVisibleImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.leftheader)
+    public var leftHeader : WinUI.UIElement! {
+        get { try! _default.get_LeftHeaderImpl() }
+        set { try! _default.put_LeftHeaderImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.rightheader)
+    public var rightHeader : WinUI.UIElement! {
+        get { try! _default.get_RightHeaderImpl() }
+        set { try! _default.put_RightHeaderImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.subtitle)
+    public var subtitle : String {
+        get { try! _default.get_SubtitleImpl() }
+        set { try! _default.put_SubtitleImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.templatesettings)
+    public var templateSettings : TitleBarTemplateSettings! {
+        get { try! _default.get_TemplateSettingsImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.title)
+    public var title : String {
+        get { try! _default.get_TitleImpl() }
+        set { try! _default.put_TitleImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.backrequested)
+    public lazy var backRequested : Event<TypedEventHandler<TitleBar?, Any?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_BackRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_BackRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebar.panetogglerequested)
+    public lazy var paneToggleRequested : Event<TypedEventHandler<TitleBar?, Any?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_PaneToggleRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_PaneToggleRequestedImpl($0)
+       }
+      )
+    }()
+
+    internal enum IControlOverrides : ComposableImpl {
+        internal typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides
+        internal typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IControlOverrides
+        internal typealias Class = TitleBar
+        internal typealias SwiftProjection = WinRTClassWeakReference<Class>
+        internal enum Default : AbiInterface {
+            internal typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar
+            internal typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITitleBar
+        }
+    }
+    internal typealias Composable = IControlOverrides
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebartemplatesettings)
+open class TitleBarTemplateSettings : WinUI.DependencyObject {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITitleBarTemplateSettings
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings>?) -> TitleBarTemplateSettings? {
+        guard let abi = abi else { return nil }
+        return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITitleBarTemplateSettingsFactory : __ABI_Microsoft_UI_Xaml_Controls.ITitleBarTemplateSettingsFactory =  try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings"))
+
+    override public init() {
+        super.init(composing: Self.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITitleBarTemplateSettingsFactory.CreateInstanceImpl(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITitleBarTemplateSettingsStatics: __ABI_Microsoft_UI_Xaml_Controls.ITitleBarTemplateSettingsStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebartemplatesettings.iconelementproperty)
+    public class var iconElementProperty : WinUI.DependencyProperty! {
+        get { try! _ITitleBarTemplateSettingsStatics.get_IconElementPropertyImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.titlebartemplatesettings.iconelement)
+    public var iconElement : IconElement! {
+        get { try! _default.get_IconElementImpl() }
+        set { try! _default.put_IconElementImpl(newValue) }
+    }
+
+    internal enum ITitleBarTemplateSettings : ComposableImpl {
+        internal typealias CABI = C_IInspectable
+        internal typealias SwiftABI = WindowsFoundation.IInspectable
+        internal typealias Class = TitleBarTemplateSettings
+        internal typealias SwiftProjection = WinRTClassWeakReference<Class>
+        internal enum Default : AbiInterface {
+            internal typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings
+            internal typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITitleBarTemplateSettings
+        }
+    }
+    internal typealias Composable = ITitleBarTemplateSettings
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.togglemenuflyoutitem)
 open class ToggleMenuFlyoutItem : WinUI.MenuFlyoutItem {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IToggleMenuFlyoutItem

@@ -1414,6 +1414,30 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventAr
     .init(Data1: 0xFC5E567E, Data2: 0x3AA9, Data3: 0x5C57, Data4: ( 0x88,0xD4,0x83,0x4A,0xD3,0xB6,0x2E,0x9E ))// FC5E567E-3AA9-5C57-88D4-834AD3B62E9E
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar: WindowsFoundation.IID {
+    .init(Data1: 0xC552714D, Data2: 0x5D30, Data3: 0x5A2B, Data4: ( 0x9C,0x7A,0xD6,0x8B,0xEA,0x3D,0xDE,0x8D ))// C552714D-5D30-5A2B-9C7A-D68BEA3DDE8D
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarFactory: WindowsFoundation.IID {
+    .init(Data1: 0xC4452799, Data2: 0x4606, Data3: 0x59EF, Data4: ( 0x93,0x92,0xA0,0x54,0x8D,0x48,0xB8,0x2E ))// C4452799-4606-59EF-9392-A0548D48B82E
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics: WindowsFoundation.IID {
+    .init(Data1: 0xF9ADA39B, Data2: 0x1F24, Data3: 0x5955, Data4: ( 0x9B,0x5C,0xCA,0xCB,0xFE,0x9A,0x41,0xCF ))// F9ADA39B-1F24-5955-9B5C-CACBFE9A41CF
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings: WindowsFoundation.IID {
+    .init(Data1: 0xBE19011A, Data2: 0x4957, Data3: 0x5332, Data4: ( 0x98,0xB8,0x17,0x04,0x40,0x1B,0x6A,0x0E ))// BE19011A-4957-5332-98B8-1704401B6A0E
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsFactory: WindowsFoundation.IID {
+    .init(Data1: 0xFCF9E48C, Data2: 0xDFE4, Data3: 0x55F3, Data4: ( 0xB1,0x79,0xB9,0x00,0xA7,0xAE,0x9C,0x25 ))// FCF9E48C-DFE4-55F3-B179-B900A7AE9C25
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsStatics: WindowsFoundation.IID {
+    .init(Data1: 0xF568E19B, Data2: 0xB9AF, Data3: 0x5F1F, Data4: ( 0xA7,0x52,0x48,0x2F,0x12,0x88,0x74,0x34 ))// F568E19B-B9AF-5F1F-A752-482F12887434
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIToggleMenuFlyoutItem: WindowsFoundation.IID {
     .init(Data1: 0x1803F260, Data2: 0x67E4, Data3: 0x5BC1, Data4: ( 0xA6,0x3A,0x12,0x35,0x10,0x16,0x7B,0xB8 ))// 1803F260-67E4-5BC1-A63A-123510167BB8
 }
@@ -23911,6 +23935,349 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_Handled(pThis, .init(from: value)))
             }
+        }
+
+    }
+
+    public class ITitleBar: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar }
+
+        internal func get_TitleImpl() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Title(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func put_TitleImpl(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, _value.get()))
+            }
+        }
+
+        internal func get_SubtitleImpl() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Subtitle(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func put_SubtitleImpl(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Subtitle(pThis, _value.get()))
+            }
+        }
+
+        internal func get_IconSourceImpl() throws -> WinUI.IconSource? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IconSource(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func put_IconSourceImpl(_ value: WinUI.IconSource?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IconSource(pThis, RawPointer(value)))
+            }
+        }
+
+        internal func get_LeftHeaderImpl() throws -> WinUI.UIElement? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_LeftHeader(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func put_LeftHeaderImpl(_ value: WinUI.UIElement?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_LeftHeader(pThis, RawPointer(value)))
+            }
+        }
+
+        internal func get_ContentImpl() throws -> WinUI.UIElement? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func put_ContentImpl(_ value: WinUI.UIElement?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Content(pThis, RawPointer(value)))
+            }
+        }
+
+        internal func get_RightHeaderImpl() throws -> WinUI.UIElement? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_RightHeader(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func put_RightHeaderImpl(_ value: WinUI.UIElement?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_RightHeader(pThis, RawPointer(value)))
+            }
+        }
+
+        internal func get_IsBackButtonVisibleImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsBackButtonVisible(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func put_IsBackButtonVisibleImpl(_ value: Bool) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsBackButtonVisible(pThis, .init(from: value)))
+            }
+        }
+
+        internal func get_IsBackButtonEnabledImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsBackButtonEnabled(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func put_IsBackButtonEnabledImpl(_ value: Bool) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsBackButtonEnabled(pThis, .init(from: value)))
+            }
+        }
+
+        internal func get_IsPaneToggleButtonVisibleImpl() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPaneToggleButtonVisible(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        internal func put_IsPaneToggleButtonVisibleImpl(_ value: Bool) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsPaneToggleButtonVisible(pThis, .init(from: value)))
+            }
+        }
+
+        internal func get_TemplateSettingsImpl() throws -> WinUI.TitleBarTemplateSettings? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_TemplateSettings(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func add_BackRequestedImpl(_ handler: TypedEventHandler<WinUI.TitleBar?, Any?>?) throws -> EventRegistrationToken {
+            var token: EventRegistrationToken = .init()
+            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CTitleBar_IInspectableWrapper(handler)
+            let _handler = try! handlerWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.add_BackRequested(pThis, _handler, &token))
+            }
+            return token
+        }
+
+        internal func remove_BackRequestedImpl(_ token: EventRegistrationToken) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_BackRequested(pThis, token))
+            }
+        }
+
+        internal func add_PaneToggleRequestedImpl(_ handler: TypedEventHandler<WinUI.TitleBar?, Any?>?) throws -> EventRegistrationToken {
+            var token: EventRegistrationToken = .init()
+            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CTitleBar_IInspectableWrapper(handler)
+            let _handler = try! handlerWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.add_PaneToggleRequested(pThis, _handler, &token))
+            }
+            return token
+        }
+
+        internal func remove_PaneToggleRequestedImpl(_ token: EventRegistrationToken) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBar.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PaneToggleRequested(pThis, token))
+            }
+        }
+
+    }
+
+    public class ITitleBarFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarFactory }
+
+        internal func CreateInstanceImpl(_ baseInterface: UnsealedWinRTClassWrapper<WinUI.TitleBar.Composable>?, _ innerInterface: inout WindowsFoundation.IInspectable?) throws -> ITitleBar {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                let _baseInterface = baseInterface?.toIInspectableABI { $0 }
+                let (_innerInterface) = try ComPtrs.initialize { _innerInterfaceAbi in
+                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarFactory.self) { pThis in
+                        try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, _baseInterface, &_innerInterfaceAbi, &valueAbi))
+                    }
+                }
+                innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
+            }
+            return ITitleBar(value!)
+        }
+
+    }
+
+    public class ITitleBarStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics }
+
+        internal func get_TitlePropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_TitleProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_SubtitlePropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_SubtitleProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_IconSourcePropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IconSourceProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_LeftHeaderPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_LeftHeaderProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_ContentPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_RightHeaderPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_RightHeaderProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_IsBackButtonVisiblePropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsBackButtonVisibleProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_IsBackButtonEnabledPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsBackButtonEnabledProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_IsPaneToggleButtonVisiblePropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPaneToggleButtonVisibleProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func get_TemplateSettingsPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_TemplateSettingsProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+    }
+
+    public class ITitleBarTemplateSettings: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings }
+
+        internal func get_IconElementImpl() throws -> WinUI.IconElement? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IconElement(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
+        }
+
+        internal func put_IconElementImpl(_ value: WinUI.IconElement?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettings.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IconElement(pThis, RawPointer(value)))
+            }
+        }
+
+    }
+
+    public class ITitleBarTemplateSettingsFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsFactory }
+
+        internal func CreateInstanceImpl(_ baseInterface: UnsealedWinRTClassWrapper<WinUI.TitleBarTemplateSettings.Composable>?, _ innerInterface: inout WindowsFoundation.IInspectable?) throws -> ITitleBarTemplateSettings {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                let _baseInterface = baseInterface?.toIInspectableABI { $0 }
+                let (_innerInterface) = try ComPtrs.initialize { _innerInterfaceAbi in
+                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsFactory.self) { pThis in
+                        try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, _baseInterface, &_innerInterfaceAbi, &valueAbi))
+                    }
+                }
+                innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
+            }
+            return ITitleBarTemplateSettings(value!)
+        }
+
+    }
+
+    public class ITitleBarTemplateSettingsStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsStatics }
+
+        internal func get_IconElementPropertyImpl() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITitleBarTemplateSettingsStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IconElementProperty(pThis, &valueAbi))
+                }
+            }
+            return .from(abi: value)
         }
 
     }
