@@ -165,10 +165,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPrese
     .init(Data1: 0x424B8AFD, Data2: 0xF7AA, Data3: 0x5E5B, Data4: ( 0x9D,0x0B,0x5F,0x0E,0xA4,0xE1,0xA5,0x6E ))// 424B8AFD-F7AA-5E5B-9D0B-5F0EA4E1A56E
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2: WindowsFoundation.IID {
-    .init(Data1: 0xF178EEBB, Data2: 0x4285, Data3: 0x5969, Data4: ( 0xA2,0x22,0x4D,0x7E,0xFA,0x8D,0x6B,0x19 ))// F178EEBB-4285-5969-A222-4D7EFA8D6B19
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenterFactory: WindowsFoundation.IID {
     .init(Data1: 0x9F5CDC57, Data2: 0xD229, Data3: 0x52B2, Data4: ( 0xAE,0xE4,0x37,0xC4,0x96,0x76,0x4E,0xA3 ))// 9F5CDC57-D229-52B2-AEE4-37C496764EA3
 }
@@ -3072,43 +3068,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls_Primitives {
         public func remove_AnchorRequested(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_AnchorRequested(pThis, token))
-            }
-        }
-
-    }
-
-    public class IScrollPresenter2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2 }
-
-        public func add_ScrollStarting(_ handler: TypedEventHandler<WinUI.ScrollPresenter?, WinUI.ScrollingScrollStartingEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ScrollStarting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_ScrollStarting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ScrollStarting(pThis, token))
-            }
-        }
-
-        public func add_ZoomStarting(_ handler: TypedEventHandler<WinUI.ScrollPresenter?, WinUI.ScrollingZoomStartingEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ZoomStarting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_ZoomStarting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollPresenter2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ZoomStarting(pThis, token))
             }
         }
 

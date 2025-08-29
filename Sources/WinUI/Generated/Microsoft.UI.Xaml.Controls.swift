@@ -10692,17 +10692,6 @@ open class ProgressRing : WinUI.Control {
         get { try! _IProgressRingStatics.get_ValueProperty() }
     }
 
-    private static let _IProgressRingStatics2: __ABI_Microsoft_UI_Xaml_Controls.IProgressRingStatics2 = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ProgressRing")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressring.determinatesourceproperty)
-    public class var determinateSourceProperty : WinUI.DependencyProperty! {
-        get { try! _IProgressRingStatics2.get_DeterminateSourceProperty() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressring.indeterminatesourceproperty)
-    public class var indeterminateSourceProperty : WinUI.DependencyProperty! {
-        get { try! _IProgressRingStatics2.get_IndeterminateSourceProperty() }
-    }
-
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressring.isactive)
     public var isActive : Bool {
         get { try! _default.get_IsActive() }
@@ -10738,22 +10727,8 @@ open class ProgressRing : WinUI.Control {
         set { try! _default.put_Value(newValue) }
     }
 
-    private lazy var _IProgressRing2: __ABI_Microsoft_UI_Xaml_Controls.IProgressRing2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressring.determinatesource)
-    public var determinateSource : AnyIAnimatedVisualSource! {
-        get { try! _IProgressRing2.get_DeterminateSource() }
-        set { try! _IProgressRing2.put_DeterminateSource(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressring.indeterminatesource)
-    public var indeterminateSource : AnyIAnimatedVisualSource! {
-        get { try! _IProgressRing2.get_IndeterminateSource() }
-        set { try! _IProgressRing2.put_IndeterminateSource(newValue) }
-    }
-
     deinit {
         _default = nil
-        _IProgressRing2 = nil
     }
 }
 
@@ -12288,36 +12263,8 @@ open class ScrollView : WinUI.Control {
       )
     }()
 
-    private lazy var _IScrollView2: __ABI_Microsoft_UI_Xaml_Controls.IScrollView2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollview.scrollstarting)
-    public lazy var scrollStarting : Event<TypedEventHandler<ScrollView?, ScrollingScrollStartingEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IScrollView2 else { return .init() }
-          return try! this.add_ScrollStarting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IScrollView2.remove_ScrollStarting($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollview.zoomstarting)
-    public lazy var zoomStarting : Event<TypedEventHandler<ScrollView?, ScrollingZoomStartingEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IScrollView2 else { return .init() }
-          return try! this.add_ZoomStarting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IScrollView2.remove_ZoomStarting($0)
-       }
-      )
-    }()
-
     deinit {
         _default = nil
-        _IScrollView2 = nil
     }
 }
 
@@ -13375,49 +13322,6 @@ open class ScrollingScrollOptions : WinRTClass {
     }
 }
 
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingscrollstartingeventargs)
-public final class ScrollingScrollStartingEventArgs : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IScrollingScrollStartingEventArgs
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingscrollstartingeventargs.correlationid)
-    public var correlationId : Int32 {
-        get { try! _default.get_CorrelationId() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingscrollstartingeventargs.horizontaloffset)
-    public var horizontalOffset : Double {
-        get { try! _default.get_HorizontalOffset() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingscrollstartingeventargs.verticaloffset)
-    public var verticalOffset : Double {
-        get { try! _default.get_VerticalOffset() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingscrollstartingeventargs.zoomfactor)
-    public var zoomFactor : Float {
-        get { try! _default.get_ZoomFactor() }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomanimationstartingeventargs)
 public final class ScrollingZoomAnimationStartingEventArgs : WinRTClass {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IScrollingZoomAnimationStartingEventArgs
@@ -13550,49 +13454,6 @@ open class ScrollingZoomOptions : WinRTClass {
     public var snapPointsMode : ScrollingSnapPointsMode {
         get { try! _default.get_SnapPointsMode() }
         set { try! _default.put_SnapPointsMode(newValue) }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomstartingeventargs)
-public final class ScrollingZoomStartingEventArgs : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IScrollingZoomStartingEventArgs
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomstartingeventargs.correlationid)
-    public var correlationId : Int32 {
-        get { try! _default.get_CorrelationId() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomstartingeventargs.horizontaloffset)
-    public var horizontalOffset : Double {
-        get { try! _default.get_HorizontalOffset() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomstartingeventargs.verticaloffset)
-    public var verticalOffset : Double {
-        get { try! _default.get_VerticalOffset() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.scrollingzoomstartingeventargs.zoomfactor)
-    public var zoomFactor : Float {
-        get { try! _default.get_ZoomFactor() }
     }
 
     deinit {
@@ -14294,12 +14155,6 @@ open class StackLayout : WinUI.VirtualizingLayout {
         get { try! _IStackLayoutStatics.get_SpacingProperty() }
     }
 
-    private static let _IStackLayoutStatics2: __ABI_Microsoft_UI_Xaml_Controls.IStackLayoutStatics2 = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.StackLayout")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.stacklayout.isvirtualizationenabledproperty)
-    public class var isVirtualizationEnabledProperty : WinUI.DependencyProperty! {
-        get { try! _IStackLayoutStatics2.get_IsVirtualizationEnabledProperty() }
-    }
-
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.stacklayout.orientation)
     public var orientation : Orientation {
         get { try! _default.get_Orientation() }
@@ -14312,16 +14167,8 @@ open class StackLayout : WinUI.VirtualizingLayout {
         set { try! _default.put_Spacing(newValue) }
     }
 
-    private lazy var _IStackLayout2: __ABI_Microsoft_UI_Xaml_Controls.IStackLayout2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.stacklayout.isvirtualizationenabled)
-    public var isVirtualizationEnabled : Bool {
-        get { try! _IStackLayout2.get_IsVirtualizationEnabled() }
-        set { try! _IStackLayout2.put_IsVirtualizationEnabled(newValue) }
-    }
-
     deinit {
         _default = nil
-        _IStackLayout2 = nil
     }
 }
 
@@ -18489,49 +18336,6 @@ public typealias SelectionChangedEventHandler = (Any?, SelectionChangedEventArgs
 public typealias SemanticZoomViewChangedEventHandler = (Any?, SemanticZoomViewChangedEventArgs?) throws -> ()
 public typealias TextChangedEventHandler = (Any?, TextChangedEventArgs?) throws -> ()
 public typealias TextControlPasteEventHandler = (Any?, TextControlPasteEventArgs?) throws -> ()
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisual)
-public protocol IAnimatedVisual : WindowsFoundation.IClosable {
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisual.duration)
-    var duration: WindowsFoundation.TimeSpan { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisual.rootvisual)
-    var rootVisual: WinAppSDK.Visual! { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisual.size)
-    var size: WindowsFoundation.Vector2 { get }
-}
-
-extension IAnimatedVisual {
-    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
-        switch iid {
-            case __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualWrapper.IID:
-                let wrapper = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualWrapper(self)
-                return wrapper!.queryInterface(iid)
-            case __ABI_Windows_Foundation.IClosableWrapper.IID:
-                let wrapper = __ABI_Windows_Foundation.IClosableWrapper(self)
-                return wrapper!.queryInterface(iid)
-            default: return nil
-        }
-    }
-}
-public typealias AnyIAnimatedVisual = any IAnimatedVisual
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisualsource)
-public protocol IAnimatedVisualSource : WinRTInterface {
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.ianimatedvisualsource.trycreateanimatedvisual)
-    func tryCreateAnimatedVisual(_ compositor: WinAppSDK.Compositor!, _ diagnostics: inout Any!) throws -> WinUI.AnyIAnimatedVisual!
-}
-
-extension IAnimatedVisualSource {
-    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
-        switch iid {
-            case __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper.IID:
-                let wrapper = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper(self)
-                return wrapper!.queryInterface(iid)
-            default: return nil
-        }
-    }
-}
-public typealias AnyIAnimatedVisualSource = any IAnimatedVisualSource
-
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.iinsertionpanel)
 public protocol IInsertionPanel : WinRTInterface {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.iinsertionpanel.getinsertionindexes)
@@ -18774,9 +18578,6 @@ extension WinUI.ContentDialogPlacement {
     }
     public static var inPlace : WinUI.ContentDialogPlacement {
         __x_ABI_CMicrosoft_CUI_CXaml_CControls_CContentDialogPlacement_InPlace
-    }
-    public static var unconstrainedPopup : WinUI.ContentDialogPlacement {
-        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CContentDialogPlacement_UnconstrainedPopup
     }
 }
 extension WinUI.ContentDialogPlacement: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}

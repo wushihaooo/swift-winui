@@ -38690,57 +38690,6 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__
         return handler
     }
 }
-private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x9555a017, Data2: 0xb6c1, Data3: 0x5aa4, Data4: ( 0xb6,0x4c,0xfc,0x41,0x76,0xc2,0x60,0xc9 ))// 9555a017-b6c1-5aa4-b64c-fc4176c260c9
-}
-
-internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs {
-    static func makeAbi() -> CABI {
-        let vtblPtr = withUnsafeMutablePointer(to: &WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVTable) { $0 }
-        return .init(lpVtbl:vtblPtr)
-    }
-}
-
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVtbl = .init(
-    QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.queryInterface($0, $1, $2) },
-    AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.addRef($0) },
-    Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.release($0) },
-    Invoke: {
-        do {
-            guard let __unwrapped__instance = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let sender: WinUI.ScrollPresenter? = __IMPL_Microsoft_UI_Xaml_Controls_Primitives.ScrollPresenterBridge.from(abi: ComPtr($1))
-            let args: WinUI.ScrollingScrollStartingEventArgs? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollingScrollStartingEventArgsBridge.from(abi: ComPtr($2))
-            try __unwrapped__instance(sender, args)
-            return S_OK
-        } catch { return failWith(error: error) }
-    }
-)
-typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper = InterfaceWrapperBase<WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsBridge>
-public class TypedEventHandlerScrollPresenter_ScrollingScrollStartingEventArgs: WindowsFoundation.IUnknown {
-    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs }
-
-    open func Invoke(_ sender: WinUI.ScrollPresenter?, _ args: WinUI.ScrollingScrollStartingEventArgs?) throws {
-        _ = try perform(as: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, RawPointer(sender), RawPointer(args)))
-        }
-    }
-
-}
-
-internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsBridge : WinRTDelegateBridge {
-    internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollPresenter?, WinUI.ScrollingScrollStartingEventArgs?>
-    internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs
-    internal typealias SwiftABI = WinUI.TypedEventHandlerScrollPresenter_ScrollingScrollStartingEventArgs
-
-    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
-        guard let abi = abi else { return nil }
-        let _default = SwiftABI(abi)
-        let handler: Handler = { (sender, args) in
-            try _default.Invoke(sender, args)
-        }
-        return handler
-    }
-}
 private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomAnimationStartingEventArgs: WindowsFoundation.IID {
     .init(Data1: 0x39a1448d, Data2: 0x8545, Data3: 0x5620, Data4: ( 0x92,0x8e,0xb5,0xc2,0x49,0xba,0xe9,0x4c ))// 39a1448d-8545-5620-928e-b5c249bae94c
 }
@@ -38833,57 +38782,6 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__
     internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollPresenter?, WinUI.ScrollingZoomCompletedEventArgs?>
     internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomCompletedEventArgs
     internal typealias SwiftABI = WinUI.TypedEventHandlerScrollPresenter_ScrollingZoomCompletedEventArgs
-
-    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
-        guard let abi = abi else { return nil }
-        let _default = SwiftABI(abi)
-        let handler: Handler = { (sender, args) in
-            try _default.Invoke(sender, args)
-        }
-        return handler
-    }
-}
-private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0xac0702e0, Data2: 0xa886, Data3: 0x5493, Data4: ( 0xb1,0xd6,0x5c,0x7f,0xe9,0x26,0xb1,0xc6 ))// ac0702e0-a886-5493-b1d6-5c7fe926b1c6
-}
-
-internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs {
-    static func makeAbi() -> CABI {
-        let vtblPtr = withUnsafeMutablePointer(to: &WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVTable) { $0 }
-        return .init(lpVtbl:vtblPtr)
-    }
-}
-
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVtbl = .init(
-    QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.queryInterface($0, $1, $2) },
-    AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.addRef($0) },
-    Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.release($0) },
-    Invoke: {
-        do {
-            guard let __unwrapped__instance = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let sender: WinUI.ScrollPresenter? = __IMPL_Microsoft_UI_Xaml_Controls_Primitives.ScrollPresenterBridge.from(abi: ComPtr($1))
-            let args: WinUI.ScrollingZoomStartingEventArgs? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollingZoomStartingEventArgsBridge.from(abi: ComPtr($2))
-            try __unwrapped__instance(sender, args)
-            return S_OK
-        } catch { return failWith(error: error) }
-    }
-)
-typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper = InterfaceWrapperBase<WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsBridge>
-public class TypedEventHandlerScrollPresenter_ScrollingZoomStartingEventArgs: WindowsFoundation.IUnknown {
-    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs }
-
-    open func Invoke(_ sender: WinUI.ScrollPresenter?, _ args: WinUI.ScrollingZoomStartingEventArgs?) throws {
-        _ = try perform(as: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, RawPointer(sender), RawPointer(args)))
-        }
-    }
-
-}
-
-internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsBridge : WinRTDelegateBridge {
-    internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollPresenter?, WinUI.ScrollingZoomStartingEventArgs?>
-    internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CPrimitives__CScrollPresenter___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs
-    internal typealias SwiftABI = WinUI.TypedEventHandlerScrollPresenter_ScrollingZoomStartingEventArgs
 
     internal static func from(abi: ComPtr<CABI>?) -> Handler? {
         guard let abi = abi else { return nil }
@@ -39304,57 +39202,6 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__
         return handler
     }
 }
-private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x96ae77f7, Data2: 0x36a3, Data3: 0x5e19, Data4: ( 0xb7,0x2d,0xea,0xe1,0xa6,0xb4,0xcc,0x4c ))// 96ae77f7-36a3-5e19-b72d-eae1a6b4cc4c
-}
-
-internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs {
-    static func makeAbi() -> CABI {
-        let vtblPtr = withUnsafeMutablePointer(to: &WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVTable) { $0 }
-        return .init(lpVtbl:vtblPtr)
-    }
-}
-
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsVtbl = .init(
-    QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.queryInterface($0, $1, $2) },
-    AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.addRef($0) },
-    Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.release($0) },
-    Invoke: {
-        do {
-            guard let __unwrapped__instance = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let sender: WinUI.ScrollView? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollViewBridge.from(abi: ComPtr($1))
-            let args: WinUI.ScrollingScrollStartingEventArgs? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollingScrollStartingEventArgsBridge.from(abi: ComPtr($2))
-            try __unwrapped__instance(sender, args)
-            return S_OK
-        } catch { return failWith(error: error) }
-    }
-)
-typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper = InterfaceWrapperBase<WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsBridge>
-public class TypedEventHandlerScrollView_ScrollingScrollStartingEventArgs: WindowsFoundation.IUnknown {
-    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs }
-
-    open func Invoke(_ sender: WinUI.ScrollView?, _ args: WinUI.ScrollingScrollStartingEventArgs?) throws {
-        _ = try perform(as: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, RawPointer(sender), RawPointer(args)))
-        }
-    }
-
-}
-
-internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsBridge : WinRTDelegateBridge {
-    internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollView?, WinUI.ScrollingScrollStartingEventArgs?>
-    internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgs
-    internal typealias SwiftABI = WinUI.TypedEventHandlerScrollView_ScrollingScrollStartingEventArgs
-
-    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
-        guard let abi = abi else { return nil }
-        let _default = SwiftABI(abi)
-        let handler: Handler = { (sender, args) in
-            try _default.Invoke(sender, args)
-        }
-        return handler
-    }
-}
 private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomAnimationStartingEventArgs: WindowsFoundation.IID {
     .init(Data1: 0x3cc6f93c, Data2: 0x022c, Data3: 0x521e, Data4: ( 0x9b,0xe0,0xcb,0xf4,0xe8,0x3c,0x00,0x5b ))// 3cc6f93c-022c-521e-9be0-cbf4e83c005b
 }
@@ -39447,57 +39294,6 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__
     internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollView?, WinUI.ScrollingZoomCompletedEventArgs?>
     internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomCompletedEventArgs
     internal typealias SwiftABI = WinUI.TypedEventHandlerScrollView_ScrollingZoomCompletedEventArgs
-
-    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
-        guard let abi = abi else { return nil }
-        let _default = SwiftABI(abi)
-        let handler: Handler = { (sender, args) in
-            try _default.Invoke(sender, args)
-        }
-        return handler
-    }
-}
-private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0xad88b444, Data2: 0x7e04, Data3: 0x5fa4, Data4: ( 0x9b,0x4f,0xca,0x8d,0x98,0xad,0x4c,0x2b ))// ad88b444-7e04-5fa4-9b4f-ca8d98ad4c2b
-}
-
-internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs {
-    static func makeAbi() -> CABI {
-        let vtblPtr = withUnsafeMutablePointer(to: &WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVTable) { $0 }
-        return .init(lpVtbl:vtblPtr)
-    }
-}
-
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsVtbl = .init(
-    QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.queryInterface($0, $1, $2) },
-    AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.addRef($0) },
-    Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.release($0) },
-    Invoke: {
-        do {
-            guard let __unwrapped__instance = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let sender: WinUI.ScrollView? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollViewBridge.from(abi: ComPtr($1))
-            let args: WinUI.ScrollingZoomStartingEventArgs? = __IMPL_Microsoft_UI_Xaml_Controls.ScrollingZoomStartingEventArgsBridge.from(abi: ComPtr($2))
-            try __unwrapped__instance(sender, args)
-            return S_OK
-        } catch { return failWith(error: error) }
-    }
-)
-typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper = InterfaceWrapperBase<WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsBridge>
-public class TypedEventHandlerScrollView_ScrollingZoomStartingEventArgs: WindowsFoundation.IUnknown {
-    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs }
-
-    open func Invoke(_ sender: WinUI.ScrollView?, _ args: WinUI.ScrollingZoomStartingEventArgs?) throws {
-        _ = try perform(as: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, RawPointer(sender), RawPointer(args)))
-        }
-    }
-
-}
-
-internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsBridge : WinRTDelegateBridge {
-    internal typealias Handler = WindowsFoundation.TypedEventHandler<WinUI.ScrollView?, WinUI.ScrollingZoomStartingEventArgs?>
-    internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgs
-    internal typealias SwiftABI = WinUI.TypedEventHandlerScrollView_ScrollingZoomStartingEventArgs
 
     internal static func from(abi: ComPtr<CABI>?) -> Handler? {
         guard let abi = abi else { return nil }

@@ -907,9 +907,6 @@ extension WinUI.AutomationEvents {
     public static var layoutInvalidated : WinUI.AutomationEvents {
         __x_ABI_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CAutomationEvents_LayoutInvalidated
     }
-    public static var notification : WinUI.AutomationEvents {
-        __x_ABI_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CAutomationEvents_Notification
-    }
 }
 extension WinUI.AutomationEvents: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 

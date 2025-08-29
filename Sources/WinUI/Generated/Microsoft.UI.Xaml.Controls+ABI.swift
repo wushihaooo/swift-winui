@@ -10,14 +10,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnchorRequestedEventArg
     .init(Data1: 0xD5645E80, Data2: 0xD4D3, Data3: 0x5DF8, Data4: ( 0xA3,0xAC,0x1F,0x9B,0xEE,0xB2,0xBC,0xEF ))// D5645E80-D4D3-5DF8-A3AC-1F9BEEB2BCEF
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisual: WindowsFoundation.IID {
-    .init(Data1: 0x645FF609, Data2: 0xFD6B, Data3: 0x5FEF, Data4: ( 0xBD,0xC0,0x9C,0x34,0xEF,0xF3,0x3C,0x64 ))// 645FF609-FD6B-5FEF-BDC0-9C34EFF33C64
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisualSource: WindowsFoundation.IID {
-    .init(Data1: 0x294765C3, Data2: 0x70E3, Data3: 0x555C, Data4: ( 0x96,0x57,0x01,0xFC,0x40,0x51,0x16,0x9D ))// 294765C3-70E3-555C-9657-01FC4051169D
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAppBar: WindowsFoundation.IID {
     .init(Data1: 0x3D8C2927, Data2: 0x5AC5, Data3: 0x51BB, Data4: ( 0x8B,0xEC,0x13,0xFF,0x4C,0x1B,0xD6,0xC8 ))// 3D8C2927-5AC5-51BB-8BEC-13FF4C1BD6C8
 }
@@ -1062,20 +1054,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing: WindowsFo
     .init(Data1: 0x2670D03F, Data2: 0xE28C, Data3: 0x5652, Data4: ( 0xBE,0xE2,0xB5,0x21,0x2E,0xBD,0xF7,0xFF ))// 2670D03F-E28C-5652-BEE2-B5212EBDF7FF
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2: WindowsFoundation.IID {
-    .init(Data1: 0xF7F384BC, Data2: 0xFAF9, Data3: 0x59C0, Data4: ( 0x8E,0xEB,0xE1,0xAB,0xFF,0x94,0x4A,0x1F ))// F7F384BC-FAF9-59C0-8EEB-E1ABFF944A1F
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingFactory: WindowsFoundation.IID {
     .init(Data1: 0x092FA98C, Data2: 0x62A7, Data3: 0x5DBC, Data4: ( 0x9A,0x85,0x3E,0x55,0x6B,0xA8,0x1F,0x79 ))// 092FA98C-62A7-5DBC-9A85-3E556BA81F79
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics: WindowsFoundation.IID {
     .init(Data1: 0x4BA1166A, Data2: 0xCEC2, Data3: 0x50E2, Data4: ( 0xB2,0x6B,0x66,0xB6,0x9D,0xC2,0xE3,0x71 ))// 4BA1166A-CEC2-50E2-B26B-66B69DC2E371
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics2: WindowsFoundation.IID {
-    .init(Data1: 0xA8A3C55A, Data2: 0xF0E0, Data3: 0x506F, Data4: ( 0x80,0xE1,0x0C,0xA8,0x7E,0x24,0x75,0x45 ))// A8A3C55A-F0E0-506F-80E1-0CA87E247545
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingTemplateSettings: WindowsFoundation.IID {
@@ -1166,10 +1150,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView: WindowsFoun
     .init(Data1: 0x8C98C86D, Data2: 0x378A, Data3: 0x5102, Data4: ( 0xA1,0xE3,0x33,0x52,0x28,0x0F,0xA0,0x10 ))// 8C98C86D-378A-5102-A1E3-3352280FA010
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2: WindowsFoundation.IID {
-    .init(Data1: 0xFA11A5D9, Data2: 0xA2A3, Data3: 0x5964, Data4: ( 0x80,0x4A,0xBB,0xD1,0x0F,0x0F,0x64,0x32 ))// FA11A5D9-A2A3-5964-804A-BBD10F0F6432
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollViewFactory: WindowsFoundation.IID {
     .init(Data1: 0xF3547344, Data2: 0x22E4, Data3: 0x5E6C, Data4: ( 0x9E,0xCE,0x66,0x50,0x4E,0xF7,0x33,0xED ))// F3547344-22E4-5E6C-9ECE-66504EF733ED
 }
@@ -1222,10 +1202,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollOptionsF
     .init(Data1: 0x31EB58FE, Data2: 0x0F6A, Data3: 0x51EC, Data4: ( 0x90,0xDB,0x5C,0xCA,0xA0,0xA2,0x88,0xA6 ))// 31EB58FE-0F6A-51EC-90DB-5CCAA0A288A6
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x0E8B9459, Data2: 0xB67C, Data3: 0x542A, Data4: ( 0xA8,0x9C,0x92,0xE8,0x6B,0xE0,0x18,0x97 ))// 0E8B9459-B67C-542A-A89C-92E86BE01897
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomAnimationStartingEventArgs: WindowsFoundation.IID {
     .init(Data1: 0x59BFB77B, Data2: 0x47C9, Data3: 0x5691, Data4: ( 0xBD,0xCD,0x53,0x6F,0xBE,0x8E,0xB8,0xC1 ))// 59BFB77B-47C9-5691-BDCD-536FBE8EB8C1
 }
@@ -1240,10 +1216,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomOptions: W
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomOptionsFactory: WindowsFoundation.IID {
     .init(Data1: 0xD1C82E57, Data2: 0xD5E8, Data3: 0x58F5, Data4: ( 0xA2,0xC0,0xEE,0x70,0xC6,0x41,0x43,0xBE ))// D1C82E57-D5E8-58F5-A2C0-EE70C64143BE
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x075EFCB6, Data2: 0x62AC, Data3: 0x5C4C, Data4: ( 0xBF,0xF1,0xE6,0x0B,0xEF,0xAE,0xCE,0x41 ))// 075EFCB6-62AC-5C4C-BFF1-E60BEFAECE41
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs: WindowsFoundation.IID {
@@ -1306,20 +1278,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayout: WindowsFou
     .init(Data1: 0x3EA9C3DD, Data2: 0x8103, Data3: 0x571F, Data4: ( 0x9E,0x07,0x44,0xEA,0x76,0xC9,0x1A,0x10 ))// 3EA9C3DD-8103-571F-9E07-44EA76C91A10
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayout2: WindowsFoundation.IID {
-    .init(Data1: 0xDBF643A3, Data2: 0xA011, Data3: 0x5FE6, Data4: ( 0x9D,0x84,0xF5,0x19,0x1D,0xA6,0x4C,0xD6 ))// DBF643A3-A011-5FE6-9D84-F5191DA64CD6
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutFactory: WindowsFoundation.IID {
     .init(Data1: 0xEA606F86, Data2: 0x21A1, Data3: 0x5C35, Data4: ( 0x91,0x1E,0x4A,0x1D,0xE8,0xBC,0x69,0xD9 ))// EA606F86-21A1-5C35-911E-4A1DE8BC69D9
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutStatics: WindowsFoundation.IID {
     .init(Data1: 0x5610AECF, Data2: 0xFB2A, Data3: 0x5726, Data4: ( 0xAC,0x3A,0x16,0x47,0x9B,0xA2,0xEC,0xAD ))// 5610AECF-FB2A-5726-AC3A-16479BA2ECAD
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutStatics2: WindowsFoundation.IID {
-    .init(Data1: 0xE5775C41, Data2: 0x276C, Data3: 0x5C84, Data4: ( 0x81,0xDD,0x07,0xFF,0xDC,0x0D,0xA9,0x0D ))// E5775C41-276C-5C84-81DD-07FFDC0DA90D
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackPanel: WindowsFoundation.IID {
@@ -1757,149 +1721,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
-    public class IAnimatedVisual: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisual }
-
-        open func get_RootVisual() throws -> WinAppSDK.Visual? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisual.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_RootVisual(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Composition.VisualBridge.from(abi: value)
-        }
-
-        open func get_Size() throws -> WindowsFoundation.Vector2 {
-            var value: __x_ABI_CWindows_CFoundation_CNumerics_CVector2 = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisual.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        open func get_Duration() throws -> WindowsFoundation.TimeSpan {
-            var value: __x_ABI_CWindows_CFoundation_CTimeSpan = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisual.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Duration(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-    }
-
-    internal static var IAnimatedVisualVTable: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisualVtbl = .init(
-        QueryInterface: { IAnimatedVisualWrapper.queryInterface($0, $1, $2) },
-        AddRef: { IAnimatedVisualWrapper.addRef($0) },
-        Release: { IAnimatedVisualWrapper.release($0) },
-        GetIids: {
-            let size = MemoryLayout<WindowsFoundation.IID>.size
-            let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
-            iids[0] = IUnknown.IID
-            iids[1] = IInspectable.IID
-            iids[2] = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualWrapper.IID
-            iids[3] = __ABI_Windows_Foundation.IClosableWrapper.IID
-            $1!.pointee = 4
-            $2!.pointee = iids
-            return S_OK
-        },
-
-        GetRuntimeClassName: {
-            _ = $0
-            let hstring = try! HString("Microsoft.UI.Xaml.Controls.IAnimatedVisual").detach()
-            $1!.pointee = hstring
-            return S_OK
-        },
-
-        GetTrustLevel: {
-            _ = $0
-            $1!.pointee = TrustLevel(rawValue: 0)
-            return S_OK
-        },
-
-        get_RootVisual: {
-            guard let __unwrapped__instance = IAnimatedVisualWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.rootVisual
-            value?.copyTo($1)
-            return S_OK
-        },
-
-        get_Size: {
-            guard let __unwrapped__instance = IAnimatedVisualWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.size
-            $1?.initialize(to: .from(swift: value))
-            return S_OK
-        },
-
-        get_Duration: {
-            guard let __unwrapped__instance = IAnimatedVisualWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.duration
-            $1?.initialize(to: .from(swift: value))
-            return S_OK
-        }
-    )
-
-    public typealias IAnimatedVisualWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Xaml_Controls.IAnimatedVisualBridge>
-    public class IAnimatedVisualSource: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisualSource }
-
-        open func TryCreateAnimatedVisual(_ compositor: WinAppSDK.Compositor?, _ diagnostics: inout Any?) throws -> WinUI.AnyIAnimatedVisual? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                let (_diagnostics) = try ComPtrs.initialize { (_diagnosticsAbi) in
-                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisualSource.self) { pThis in
-                        try CHECKED(pThis.pointee.lpVtbl.pointee.TryCreateAnimatedVisual(pThis, RawPointer(compositor), &_diagnosticsAbi, &resultAbi))
-                    }
-                }
-                diagnostics = __ABI_.AnyWrapper.unwrapFrom(abi: _diagnostics)
-            }
-            return __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualWrapper.unwrapFrom(abi: result)
-        }
-
-    }
-
-    internal static var IAnimatedVisualSourceVTable: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAnimatedVisualSourceVtbl = .init(
-        QueryInterface: { IAnimatedVisualSourceWrapper.queryInterface($0, $1, $2) },
-        AddRef: { IAnimatedVisualSourceWrapper.addRef($0) },
-        Release: { IAnimatedVisualSourceWrapper.release($0) },
-        GetIids: {
-            let size = MemoryLayout<WindowsFoundation.IID>.size
-            let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
-            iids[0] = IUnknown.IID
-            iids[1] = IInspectable.IID
-            iids[2] = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper.IID
-            $1!.pointee = 3
-            $2!.pointee = iids
-            return S_OK
-        },
-
-        GetRuntimeClassName: {
-            _ = $0
-            let hstring = try! HString("Microsoft.UI.Xaml.Controls.IAnimatedVisualSource").detach()
-            $1!.pointee = hstring
-            return S_OK
-        },
-
-        GetTrustLevel: {
-            _ = $0
-            $1!.pointee = TrustLevel(rawValue: 0)
-            return S_OK
-        },
-
-        TryCreateAnimatedVisual: {
-            do {
-                guard let __unwrapped__instance = IAnimatedVisualSourceWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-                let compositor: WinAppSDK.Compositor? = __IMPL_Microsoft_UI_Composition.CompositorBridge.from(abi: ComPtr($1))
-                var diagnostics: Any?
-                let result = try __unwrapped__instance.tryCreateAnimatedVisual(compositor, &diagnostics)
-                let diagnosticsWrapper = __ABI_.AnyWrapper(diagnostics)
-                diagnosticsWrapper?.copyTo($2)
-                let resultWrapper = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualWrapper(result)
-                resultWrapper?.copyTo($3)
-                return S_OK
-            } catch { return failWith(error: error) }
-        }
-    )
-
-    public typealias IAnimatedVisualSourceWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceBridge>
     public class IAppBar: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIAppBar }
 
@@ -16032,45 +15853,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
-    public class IProgressRing2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2 }
-
-        public func get_DeterminateSource() throws -> WinUI.AnyIAnimatedVisualSource? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeterminateSource(pThis, &valueAbi))
-                }
-            }
-            return __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper.unwrapFrom(abi: value)
-        }
-
-        public func put_DeterminateSource(_ value: WinUI.AnyIAnimatedVisualSource?) throws {
-            let valueWrapper = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper(value)
-            let _value = try! valueWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_DeterminateSource(pThis, _value))
-            }
-        }
-
-        public func get_IndeterminateSource() throws -> WinUI.AnyIAnimatedVisualSource? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IndeterminateSource(pThis, &valueAbi))
-                }
-            }
-            return __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper.unwrapFrom(abi: value)
-        }
-
-        public func put_IndeterminateSource(_ value: WinUI.AnyIAnimatedVisualSource?) throws {
-            let valueWrapper = __ABI_Microsoft_UI_Xaml_Controls.IAnimatedVisualSourceWrapper(value)
-            let _value = try! valueWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRing2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IndeterminateSource(pThis, _value))
-            }
-        }
-
-    }
-
     public class IProgressRingFactory: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingFactory }
 
@@ -16132,29 +15914,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumProperty(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
-        }
-
-    }
-
-    public class IProgressRingStatics2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics2 }
-
-        public func get_DeterminateSourceProperty() throws -> WinUI.DependencyProperty? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeterminateSourceProperty(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
-        }
-
-        public func get_IndeterminateSourceProperty() throws -> WinUI.DependencyProperty? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIProgressRingStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IndeterminateSourceProperty(pThis, &valueAbi))
                 }
             }
             return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
@@ -18102,43 +17861,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
-    public class IScrollView2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2 }
-
-        public func add_ScrollStarting(_ handler: TypedEventHandler<WinUI.ScrollView?, WinUI.ScrollingScrollStartingEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingScrollStartingEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ScrollStarting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_ScrollStarting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ScrollStarting(pThis, token))
-            }
-        }
-
-        public func add_ZoomStarting(_ handler: TypedEventHandler<WinUI.ScrollView?, WinUI.ScrollingZoomStartingEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinUI.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollView___x_ABI_CMicrosoft__CUI__CXaml__CControls__CScrollingZoomStartingEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ZoomStarting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_ZoomStarting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollView2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ZoomStarting(pThis, token))
-            }
-        }
-
-    }
-
     public class IScrollViewFactory: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollViewFactory }
 
@@ -19853,43 +19575,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
-    public class IScrollingScrollStartingEventArgs: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs }
-
-        public func get_CorrelationId() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_CorrelationId(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_HorizontalOffset() throws -> Double {
-            var value: DOUBLE = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalOffset(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_VerticalOffset() throws -> Double {
-            var value: DOUBLE = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalOffset(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_ZoomFactor() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingScrollStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ZoomFactor(pThis, &value))
-            }
-            return value
-        }
-
-    }
-
     public class IScrollingZoomAnimationStartingEventArgs: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomAnimationStartingEventArgs }
 
@@ -20015,43 +19700,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
                 innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
             }
             return IScrollingZoomOptions(value!)
-        }
-
-    }
-
-    public class IScrollingZoomStartingEventArgs: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs }
-
-        public func get_CorrelationId() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_CorrelationId(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_HorizontalOffset() throws -> Double {
-            var value: DOUBLE = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalOffset(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_VerticalOffset() throws -> Double {
-            var value: DOUBLE = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalOffset(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_ZoomFactor() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIScrollingZoomStartingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ZoomFactor(pThis, &value))
-            }
-            return value
         }
 
     }
@@ -21242,25 +20890,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
-    public class IStackLayout2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayout2 }
-
-        public func get_IsVirtualizationEnabled() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayout2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsVirtualizationEnabled(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        public func put_IsVirtualizationEnabled(_ value: Bool) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayout2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsVirtualizationEnabled(pThis, .init(from: value)))
-            }
-        }
-
-    }
-
     public class IStackLayoutFactory: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutFactory }
 
@@ -21295,20 +20924,6 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpacingProperty(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
-        }
-
-    }
-
-    public class IStackLayoutStatics2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutStatics2 }
-
-        public func get_IsVirtualizationEnabledProperty() throws -> WinUI.DependencyProperty? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIStackLayoutStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsVirtualizationEnabledProperty(pThis, &valueAbi))
                 }
             }
             return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)

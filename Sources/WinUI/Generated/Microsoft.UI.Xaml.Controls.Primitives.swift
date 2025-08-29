@@ -1816,33 +1816,6 @@ open class ScrollPresenter : WinUI.FrameworkElement, WinUI.IScrollAnchorProvider
       )
     }()
 
-    private lazy var _IScrollPresenter2: __ABI_Microsoft_UI_Xaml_Controls_Primitives.IScrollPresenter2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.primitives.scrollpresenter.scrollstarting)
-    public lazy var scrollStarting : Event<TypedEventHandler<ScrollPresenter?, ScrollingScrollStartingEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IScrollPresenter2 else { return .init() }
-          return try! this.add_ScrollStarting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IScrollPresenter2.remove_ScrollStarting($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.primitives.scrollpresenter.zoomstarting)
-    public lazy var zoomStarting : Event<TypedEventHandler<ScrollPresenter?, ScrollingZoomStartingEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IScrollPresenter2 else { return .init() }
-          return try! this.add_ZoomStarting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IScrollPresenter2.remove_ZoomStarting($0)
-       }
-      )
-    }()
-
     private lazy var _IScrollAnchorProvider: __ABI_Microsoft_UI_Xaml_Controls.IScrollAnchorProvider! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.primitives.scrollpresenter.registeranchorcandidate)
     public func registerAnchorCandidate(_ element: WinUI.UIElement!) throws {
@@ -1861,7 +1834,6 @@ open class ScrollPresenter : WinUI.FrameworkElement, WinUI.IScrollAnchorProvider
 
     deinit {
         _default = nil
-        _IScrollPresenter2 = nil
         _IScrollAnchorProvider = nil
     }
 }
