@@ -18,130 +18,124 @@ public final class XamlBindingHelper : WinRTClass {
     }
 
     @_spi(WinRTInternal)
-    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CMarkup_CIXamlBindingHelper>?) -> XamlBindingHelper? {
-        guard let abi = abi else { return nil }
-        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-    }
-
-    @_spi(WinRTInternal)
     public init(fromAbi: WindowsFoundation.IInspectable) {
         super.init(fromAbi)
     }
 
-    private static let _IXamlBindingHelperStatics: __ABI_Microsoft_UI_Xaml_Markup.IXamlBindingHelperStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Markup.XamlBindingHelper"))
+    private static let _IXamlBindingHelperStatics: __ABI_Microsoft_UI_Xaml_Markup.IXamlBindingHelperStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Markup.XamlBindingHelper")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.getdatatemplatecomponent)
-    public static func getDataTemplateComponent(_ element: WinUI.DependencyObject!) -> AnyIDataTemplateComponent! {
-        return try! _IXamlBindingHelperStatics.GetDataTemplateComponentImpl(element)
+    public static func getDataTemplateComponent(_ element: WinUI.DependencyObject!) throws -> AnyIDataTemplateComponent! {
+        return try _IXamlBindingHelperStatics.GetDataTemplateComponent(element)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setdatatemplatecomponent)
-    public static func setDataTemplateComponent(_ element: WinUI.DependencyObject!, _ value: AnyIDataTemplateComponent!) {
-        try! _IXamlBindingHelperStatics.SetDataTemplateComponentImpl(element, value)
+    public static func setDataTemplateComponent(_ element: WinUI.DependencyObject!, _ value: AnyIDataTemplateComponent!) throws {
+        try _IXamlBindingHelperStatics.SetDataTemplateComponent(element, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.suspendrendering)
-    public static func suspendRendering(_ target: WinUI.UIElement!) {
-        try! _IXamlBindingHelperStatics.SuspendRenderingImpl(target)
+    public static func suspendRendering(_ target: WinUI.UIElement!) throws {
+        try _IXamlBindingHelperStatics.SuspendRendering(target)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.resumerendering)
-    public static func resumeRendering(_ target: WinUI.UIElement!) {
-        try! _IXamlBindingHelperStatics.ResumeRenderingImpl(target)
+    public static func resumeRendering(_ target: WinUI.UIElement!) throws {
+        try _IXamlBindingHelperStatics.ResumeRendering(target)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.convertvalue)
-    public static func convertValue(_ type: WinUI.TypeName, _ value: Any!) -> Any! {
-        return try! _IXamlBindingHelperStatics.ConvertValueImpl(type, value)
+    public static func convertValue(_ type: WinUI.TypeName, _ value: Any!) throws -> Any! {
+        return try _IXamlBindingHelperStatics.ConvertValue(type, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromstring)
-    public static func setPropertyFromString(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: String) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromStringImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromString(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: String) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromString(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromboolean)
-    public static func setPropertyFromBoolean(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Bool) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromBooleanImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromBoolean(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Bool) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromBoolean(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromchar16)
-    public static func setPropertyFromChar16(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Character) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromChar16Impl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromChar16(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Character) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromChar16(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromdatetime)
-    public static func setPropertyFromDateTime(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.DateTime) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromDateTimeImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromDateTime(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.DateTime) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromDateTime(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromdouble)
-    public static func setPropertyFromDouble(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Double) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromDoubleImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromDouble(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Double) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromDouble(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromint32)
-    public static func setPropertyFromInt32(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Int32) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromInt32Impl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromInt32(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Int32) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromInt32(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromuint32)
-    public static func setPropertyFromUInt32(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt32) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromUInt32Impl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromUInt32(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt32) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromUInt32(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromint64)
-    public static func setPropertyFromInt64(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Int64) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromInt64Impl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromInt64(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Int64) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromInt64(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromuint64)
-    public static func setPropertyFromUInt64(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt64) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromUInt64Impl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromUInt64(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt64) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromUInt64(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromsingle)
-    public static func setPropertyFromSingle(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Float) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromSingleImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromSingle(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Float) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromSingle(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfrompoint)
-    public static func setPropertyFromPoint(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Point) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromPointImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromPoint(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Point) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromPoint(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromrect)
-    public static func setPropertyFromRect(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Rect) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromRectImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromRect(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Rect) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromRect(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromsize)
-    public static func setPropertyFromSize(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Size) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromSizeImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromSize(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Size) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromSize(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromtimespan)
-    public static func setPropertyFromTimeSpan(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.TimeSpan) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromTimeSpanImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromTimeSpan(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.TimeSpan) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromTimeSpan(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfrombyte)
-    public static func setPropertyFromByte(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt8) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromByteImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromByte(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: UInt8) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromByte(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromuri)
-    public static func setPropertyFromUri(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Uri!) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromUriImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromUri(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: WindowsFoundation.Uri!) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromUri(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.setpropertyfromobject)
-    public static func setPropertyFromObject(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Any!) {
-        try! _IXamlBindingHelperStatics.SetPropertyFromObjectImpl(dependencyObject, propertyToSet, value)
+    public static func setPropertyFromObject(_ dependencyObject: Any!, _ propertyToSet: WinUI.DependencyProperty!, _ value: Any!) throws {
+        try _IXamlBindingHelperStatics.SetPropertyFromObject(dependencyObject, propertyToSet, value)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlbindinghelper.datatemplatecomponentproperty)
     public static var dataTemplateComponentProperty : WinUI.DependencyProperty! {
-        get { try! _IXamlBindingHelperStatics.get_DataTemplateComponentPropertyImpl() }
+        get { try! _IXamlBindingHelperStatics.get_DataTemplateComponentProperty() }
     }
 
     deinit {
@@ -163,25 +157,19 @@ public final class XamlReader : WinRTClass {
     }
 
     @_spi(WinRTInternal)
-    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CMarkup_CIXamlReader>?) -> XamlReader? {
-        guard let abi = abi else { return nil }
-        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-    }
-
-    @_spi(WinRTInternal)
     public init(fromAbi: WindowsFoundation.IInspectable) {
         super.init(fromAbi)
     }
 
-    private static let _IXamlReaderStatics: __ABI_Microsoft_UI_Xaml_Markup.IXamlReaderStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Markup.XamlReader"))
+    private static let _IXamlReaderStatics: __ABI_Microsoft_UI_Xaml_Markup.IXamlReaderStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Markup.XamlReader")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlreader.load)
-    public static func load(_ xaml: String) -> Any! {
-        return try! _IXamlReaderStatics.LoadImpl(xaml)
+    public static func load(_ xaml: String) throws -> Any! {
+        return try _IXamlReaderStatics.Load(xaml)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xamlreader.loadwithinitialtemplatevalidation)
-    public static func loadWithInitialTemplateValidation(_ xaml: String) -> Any! {
-        return try! _IXamlReaderStatics.LoadWithInitialTemplateValidationImpl(xaml)
+    public static func loadWithInitialTemplateValidation(_ xaml: String) throws -> Any! {
+        return try _IXamlReaderStatics.LoadWithInitialTemplateValidation(xaml)
     }
 
     deinit {
@@ -190,7 +178,7 @@ public final class XamlReader : WinRTClass {
 }
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xmlnsdefinition)
-public struct XmlnsDefinition: Hashable, Codable {
+public struct XmlnsDefinition: Hashable, Codable, Sendable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xmlnsdefinition.xmlnamespace)
     public var xmlNamespace: String = ""
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.xmlnsdefinition.namespace)
@@ -199,9 +187,6 @@ public struct XmlnsDefinition: Hashable, Codable {
     public init(xmlNamespace: String, namespace: String) {
         self.xmlNamespace = xmlNamespace
         self.namespace = namespace
-    }
-    public static func from(abi: __x_ABI_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition) -> XmlnsDefinition {
-        .init(xmlNamespace: .init(from: abi.XmlNamespace), namespace: .init(from: abi.Namespace))
     }
 }
 
@@ -283,6 +268,8 @@ public protocol IXamlMetadataProvider : WinRTInterface {
     func getXamlType(_ type: WinUI.TypeName) throws -> WinUI.AnyIXamlType!
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.ixamlmetadataprovider.getxamltype)
     func getXamlType(_ fullName: String) throws -> WinUI.AnyIXamlType!
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.markup.ixamlmetadataprovider.getxmlnsdefinitions)
+    func getXmlnsDefinitions() throws -> [WinUI.XmlnsDefinition]
 }
 
 extension IXamlMetadataProvider {

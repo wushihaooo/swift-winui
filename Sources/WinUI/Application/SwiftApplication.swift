@@ -49,7 +49,7 @@ open class SwiftApplication: Application, IXamlMetadataProvider {
                     fatalError("unable to find application class \(appClass)")
                 }
                 var application: SwiftApplication!
-                Application.start { _ in
+                try Application.start { _ in
                     MainRunLoopTickler.setup()
                     application = (instance as! SwiftApplication.Type).init()
                 }
@@ -79,5 +79,9 @@ open class SwiftApplication: Application, IXamlMetadataProvider {
 
     public func getXamlType(_ fullName: String) throws -> IXamlType! {
         try metadataProvider.getXamlType(fullName)
+    }
+
+    public func getXmlnsDefinitions() throws -> [XmlnsDefinition] {
+    	try metadataProvider.getXmlnsDefinitions()
     }
 }
