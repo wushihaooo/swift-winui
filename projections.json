@@ -112,8 +112,13 @@
     "Microsoft.UI.Xaml.Controls.GridViewItem",
     "Microsoft.UI.Xaml.Controls.ItemsWrapGrid",
     "Microsoft.UI.Xaml.Controls.RefreshContainer",
-    "Microsoft.UI.Xaml.Controls.NavigationViewItem"
+    "Microsoft.UI.Xaml.Controls.NavigationViewItem",
+    "Microsoft.UI.Xaml.Controls.WebView2",
+    "Microsoft.Web.WebView2.Core.CoreWebView2",
+    "Microsoft.Web.WebView2.Core.CoreWebView2Controller",
+    "Microsoft.Web.WebView2.Core.CoreWebView2Environment",
   ],
   "exclude": [
   ]
 }
+
