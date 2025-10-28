@@ -28,6 +28,8 @@ public typealias ContentDialogPlacement = __x_ABI_CMicrosoft_CUI_CXaml_CControls
 public typealias ContentDialogResult = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CContentDialogResult
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.elementrealizationoptions)
 public typealias ElementRealizationOptions = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CElementRealizationOptions
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expanddirection)
+public typealias ExpandDirection = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CExpandDirection
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.incrementalloadingtrigger)
 public typealias IncrementalLoadingTrigger = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.indexbasedlayoutorientation)
@@ -68,6 +70,10 @@ public typealias PasswordRevealMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPa
 public typealias PipsPagerButtonVisibility = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPipsPagerButtonVisibility
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pipspagerwrapmode)
 public typealias PipsPagerWrapMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPipsPagerWrapMode
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotheaderfocusvisualplacement)
+public typealias PivotHeaderFocusVisualPlacement = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotHeaderFocusVisualPlacement
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotslideinanimationgroup)
+public typealias PivotSlideInAnimationGroup = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotSlideInAnimationGroup
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.refreshpulldirection)
 public typealias RefreshPullDirection = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CRefreshPullDirection
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.refreshvisualizerorientation)
@@ -110,6 +116,10 @@ public typealias SnapPointsType = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSnapPo
 public typealias SplitViewDisplayMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSplitViewDisplayMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.splitviewpaneplacement)
 public typealias SplitViewPanePlacement = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSplitViewPanePlacement
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewclosebuttonoverlaymode)
+public typealias TabViewCloseButtonOverlayMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewCloseButtonOverlayMode
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewwidthmode)
+public typealias TabViewWidthMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewWidthMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.teachingtipclosereason)
 public typealias TeachingTipCloseReason = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTeachingTipCloseReason
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.teachingtipherocontentplacementmode)
@@ -821,6 +831,157 @@ public final class Border : WinUI.FrameworkElement {
     public var padding : WinUI.Thickness {
         get { try! _default.get_Padding() }
         set { try! _default.put_Padding(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar)
+open class BreadcrumbBar : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBar
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIBreadcrumbBar
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IBreadcrumbBarFactory : __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBarFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.BreadcrumbBar")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.BreadcrumbBarBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IBreadcrumbBarFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IBreadcrumbBarStatics: __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBarStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.BreadcrumbBar")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar.itemtemplateproperty)
+    public class var itemTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IBreadcrumbBarStatics.get_ItemTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar.itemssourceproperty)
+    public class var itemsSourceProperty : WinUI.DependencyProperty! {
+        get { try! _IBreadcrumbBarStatics.get_ItemsSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar.itemtemplate)
+    public var itemTemplate : Any! {
+        get { try! _default.get_ItemTemplate() }
+        set { try! _default.put_ItemTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar.itemssource)
+    public var itemsSource : Any! {
+        get { try! _default.get_ItemsSource() }
+        set { try! _default.put_ItemsSource(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbar.itemclicked)
+    public lazy var itemClicked : Event<TypedEventHandler<BreadcrumbBar?, BreadcrumbBarItemClickedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_ItemClicked($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_ItemClicked($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbaritem)
+open class BreadcrumbBarItem : WinUI.ContentControl {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBarItem
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIBreadcrumbBarItem
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IBreadcrumbBarItemFactory : __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBarItemFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.BreadcrumbBarItem")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.BreadcrumbBarItemBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IBreadcrumbBarItemFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbaritemclickedeventargs)
+public final class BreadcrumbBarItemClickedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IBreadcrumbBarItemClickedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIBreadcrumbBarItemClickedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbaritemclickedeventargs.index)
+    public var index : Int32 {
+        get { try! _default.get_Index() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.breadcrumbbaritemclickedeventargs.item)
+    public var item : Any! {
+        get { try! _default.get_Item() }
     }
 
     deinit {
@@ -1581,6 +1742,47 @@ open class ComboBox : WinUI.Selector {
     deinit {
         _default = nil
         _IComboBoxOverrides = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.comboboxitem)
+open class ComboBoxItem : WinUI.SelectorItem {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IComboBoxItem
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIComboBoxItem
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IComboBoxItemFactory : __ABI_Microsoft_UI_Xaml_Controls.IComboBoxItemFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ComboBoxItem")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.ComboBoxItemBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IComboBoxItemFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    deinit {
+        _default = nil
     }
 }
 
@@ -3439,6 +3641,213 @@ public final class DragItemsStartingEventArgs : WinRTClass {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.dragitemsstartingeventargs.items)
     public var items : WindowsFoundation.AnyIVector<Any?>! {
         get { try! _default.get_Items() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander)
+open class Expander : WinUI.ContentControl {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IExpander
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIExpander
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IExpanderFactory : __ABI_Microsoft_UI_Xaml_Controls.IExpanderFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Expander")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.ExpanderBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IExpanderFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IExpanderStatics: __ABI_Microsoft_UI_Xaml_Controls.IExpanderStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Expander")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.expanddirectionproperty)
+    public class var expandDirectionProperty : WinUI.DependencyProperty! {
+        get { try! _IExpanderStatics.get_ExpandDirectionProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.headerproperty)
+    public class var headerProperty : WinUI.DependencyProperty! {
+        get { try! _IExpanderStatics.get_HeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.headertemplateproperty)
+    public class var headerTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IExpanderStatics.get_HeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.headertemplateselectorproperty)
+    public class var headerTemplateSelectorProperty : WinUI.DependencyProperty! {
+        get { try! _IExpanderStatics.get_HeaderTemplateSelectorProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.isexpandedproperty)
+    public class var isExpandedProperty : WinUI.DependencyProperty! {
+        get { try! _IExpanderStatics.get_IsExpandedProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.expanddirection)
+    public var expandDirection : ExpandDirection {
+        get { try! _default.get_ExpandDirection() }
+        set { try! _default.put_ExpandDirection(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.header)
+    public var header : Any! {
+        get { try! _default.get_Header() }
+        set { try! _default.put_Header(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.headertemplate)
+    public var headerTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_HeaderTemplate() }
+        set { try! _default.put_HeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.headertemplateselector)
+    public var headerTemplateSelector : DataTemplateSelector! {
+        get { try! _default.get_HeaderTemplateSelector() }
+        set { try! _default.put_HeaderTemplateSelector(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.isexpanded)
+    public var isExpanded : Bool {
+        get { try! _default.get_IsExpanded() }
+        set { try! _default.put_IsExpanded(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.templatesettings)
+    public var templateSettings : ExpanderTemplateSettings! {
+        get { try! _default.get_TemplateSettings() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.collapsed)
+    public lazy var collapsed : Event<TypedEventHandler<Expander?, ExpanderCollapsedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_Collapsed($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_Collapsed($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expander.expanding)
+    public lazy var expanding : Event<TypedEventHandler<Expander?, ExpanderExpandingEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_Expanding($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_Expanding($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expandercollapsedeventargs)
+public final class ExpanderCollapsedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IExpanderCollapsedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIExpanderCollapsedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expanderexpandingeventargs)
+public final class ExpanderExpandingEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IExpanderExpandingEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIExpanderExpandingEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expandertemplatesettings)
+public final class ExpanderTemplateSettings : WinUI.DependencyObject {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IExpanderTemplateSettings
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIExpanderTemplateSettings
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expandertemplatesettings.contentheight)
+    public var contentHeight : Double {
+        get { try! _default.get_ContentHeight() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.expandertemplatesettings.negativecontentheight)
+    public var negativeContentHeight : Double {
+        get { try! _default.get_NegativeContentHeight() }
     }
 
     deinit {
@@ -5908,6 +6317,70 @@ open class ItemCollectionTransitionProvider : WinRTClass {
     deinit {
         _default = nil
         _IItemCollectionTransitionProviderOverrides = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemcontainer)
+open class ItemContainer : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IItemContainer
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIItemContainer
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IItemContainerFactory : __ABI_Microsoft_UI_Xaml_Controls.IItemContainerFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ItemContainer")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.ItemContainerBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IItemContainerFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IItemContainerStatics: __ABI_Microsoft_UI_Xaml_Controls.IItemContainerStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ItemContainer")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemcontainer.childproperty)
+    public class var childProperty : WinUI.DependencyProperty! {
+        get { try! _IItemContainerStatics.get_ChildProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemcontainer.isselectedproperty)
+    public class var isSelectedProperty : WinUI.DependencyProperty! {
+        get { try! _IItemContainerStatics.get_IsSelectedProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemcontainer.child)
+    public var child : WinUI.UIElement! {
+        get { try! _default.get_Child() }
+        set { try! _default.put_Child(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.itemcontainer.isselected)
+    public var isSelected : Bool {
+        get { try! _default.get_IsSelected() }
+        set { try! _default.put_IsSelected(newValue) }
+    }
+
+    deinit {
+        _default = nil
     }
 }
 
@@ -10472,6 +10945,347 @@ public final class PipsPagerTemplateSettings : WinUI.DependencyObject {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot)
+open class Pivot : WinUI.ItemsControl {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPivot
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPivot
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IPivotFactory : __ABI_Microsoft_UI_Xaml_Controls.IPivotFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Pivot")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.PivotBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IPivotFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IPivotStatics: __ABI_Microsoft_UI_Xaml_Controls.IPivotStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Pivot")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.getslideinanimationgroup)
+    public class func getSlideInAnimationGroup(_ element: WinUI.FrameworkElement!) throws -> PivotSlideInAnimationGroup {
+        return try _IPivotStatics.GetSlideInAnimationGroup(element)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.setslideinanimationgroup)
+    public class func setSlideInAnimationGroup(_ element: WinUI.FrameworkElement!, _ value: PivotSlideInAnimationGroup) throws {
+        try _IPivotStatics.SetSlideInAnimationGroup(element, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.headerfocusvisualplacementproperty)
+    public class var headerFocusVisualPlacementProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_HeaderFocusVisualPlacementProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.headertemplateproperty)
+    public class var headerTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_HeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty)
+    public class var isHeaderItemsCarouselEnabledProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_IsHeaderItemsCarouselEnabledProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.islockedproperty)
+    public class var isLockedProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_IsLockedProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.leftheaderproperty)
+    public class var leftHeaderProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_LeftHeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.leftheadertemplateproperty)
+    public class var leftHeaderTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_LeftHeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.rightheaderproperty)
+    public class var rightHeaderProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_RightHeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.rightheadertemplateproperty)
+    public class var rightHeaderTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_RightHeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.selectedindexproperty)
+    public class var selectedIndexProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_SelectedIndexProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.selecteditemproperty)
+    public class var selectedItemProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_SelectedItemProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.slideinanimationgroupproperty)
+    public class var slideInAnimationGroupProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_SlideInAnimationGroupProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.titleproperty)
+    public class var titleProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_TitleProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.titletemplateproperty)
+    public class var titleTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotStatics.get_TitleTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.headerfocusvisualplacement)
+    public var headerFocusVisualPlacement : PivotHeaderFocusVisualPlacement {
+        get { try! _default.get_HeaderFocusVisualPlacement() }
+        set { try! _default.put_HeaderFocusVisualPlacement(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.headertemplate)
+    public var headerTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_HeaderTemplate() }
+        set { try! _default.put_HeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.isheaderitemscarouselenabled)
+    public var isHeaderItemsCarouselEnabled : Bool {
+        get { try! _default.get_IsHeaderItemsCarouselEnabled() }
+        set { try! _default.put_IsHeaderItemsCarouselEnabled(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.islocked)
+    public var isLocked : Bool {
+        get { try! _default.get_IsLocked() }
+        set { try! _default.put_IsLocked(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.leftheader)
+    public var leftHeader : Any! {
+        get { try! _default.get_LeftHeader() }
+        set { try! _default.put_LeftHeader(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.leftheadertemplate)
+    public var leftHeaderTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_LeftHeaderTemplate() }
+        set { try! _default.put_LeftHeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.rightheader)
+    public var rightHeader : Any! {
+        get { try! _default.get_RightHeader() }
+        set { try! _default.put_RightHeader(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.rightheadertemplate)
+    public var rightHeaderTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_RightHeaderTemplate() }
+        set { try! _default.put_RightHeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.selectedindex)
+    public var selectedIndex : Int32 {
+        get { try! _default.get_SelectedIndex() }
+        set { try! _default.put_SelectedIndex(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.selecteditem)
+    public var selectedItem : Any! {
+        get { try! _default.get_SelectedItem() }
+        set { try! _default.put_SelectedItem(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.title)
+    public var title : Any! {
+        get { try! _default.get_Title() }
+        set { try! _default.put_Title(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.titletemplate)
+    public var titleTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_TitleTemplate() }
+        set { try! _default.put_TitleTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.pivotitemloaded)
+    public lazy var pivotItemLoaded : Event<TypedEventHandler<Pivot?, PivotItemEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_PivotItemLoaded($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_PivotItemLoaded($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.pivotitemloading)
+    public lazy var pivotItemLoading : Event<TypedEventHandler<Pivot?, PivotItemEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_PivotItemLoading($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_PivotItemLoading($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.pivotitemunloaded)
+    public lazy var pivotItemUnloaded : Event<TypedEventHandler<Pivot?, PivotItemEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_PivotItemUnloaded($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_PivotItemUnloaded($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.pivotitemunloading)
+    public lazy var pivotItemUnloading : Event<TypedEventHandler<Pivot?, PivotItemEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_PivotItemUnloading($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_PivotItemUnloading($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivot.selectionchanged)
+    public lazy var selectionChanged : Event<SelectionChangedEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_SelectionChanged($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_SelectionChanged($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotitem)
+open class PivotItem : WinUI.ContentControl {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPivotItem
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPivotItem
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IPivotItemFactory : __ABI_Microsoft_UI_Xaml_Controls.IPivotItemFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.PivotItem")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.PivotItemBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IPivotItemFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IPivotItemStatics: __ABI_Microsoft_UI_Xaml_Controls.IPivotItemStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.PivotItem")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotitem.headerproperty)
+    public class var headerProperty : WinUI.DependencyProperty! {
+        get { try! _IPivotItemStatics.get_HeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotitem.header)
+    public var header : Any! {
+        get { try! _default.get_Header() }
+        set { try! _default.put_Header(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotitemeventargs)
+public final class PivotItemEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPivotItemEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPivotItemEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    private static let _defaultFactory: WindowsFoundation.IActivationFactory = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.PivotItemEventArgs")
+    override public init() {
+        super.init(try! Self._defaultFactory.ActivateInstance())
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.pivotitemeventargs.item)
+    public var item : PivotItem! {
+        get { try! _default.get_Item() }
+        set { try! _default.put_Item(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.progressbar)
 open class ProgressBar : WinUI.RangeBase {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IProgressBar
@@ -13512,6 +14326,169 @@ open class SelectionChangedEventArgs : WinUI.RoutedEventArgs {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar)
+open class SelectorBar : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ISelectorBar
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CISelectorBar
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ISelectorBarFactory : __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SelectorBar")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.SelectorBarBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ISelectorBarFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ISelectorBarStatics: __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SelectorBar")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar.itemsproperty)
+    public class var itemsProperty : WinUI.DependencyProperty! {
+        get { try! _ISelectorBarStatics.get_ItemsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar.selecteditemproperty)
+    public class var selectedItemProperty : WinUI.DependencyProperty! {
+        get { try! _ISelectorBarStatics.get_SelectedItemProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar.items)
+    public var items : WindowsFoundation.AnyIVector<SelectorBarItem?>! {
+        get { try! _default.get_Items() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar.selecteditem)
+    public var selectedItem : SelectorBarItem! {
+        get { try! _default.get_SelectedItem() }
+        set { try! _default.put_SelectedItem(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbar.selectionchanged)
+    public lazy var selectionChanged : Event<TypedEventHandler<SelectorBar?, SelectorBarSelectionChangedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_SelectionChanged($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_SelectionChanged($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbaritem)
+open class SelectorBarItem : WinUI.ItemContainer {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarItem
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CISelectorBarItem
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ISelectorBarItemFactory : __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarItemFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SelectorBarItem")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.SelectorBarItemBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ISelectorBarItemFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ISelectorBarItemStatics: __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarItemStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SelectorBarItem")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbaritem.iconproperty)
+    public class var iconProperty : WinUI.DependencyProperty! {
+        get { try! _ISelectorBarItemStatics.get_IconProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbaritem.textproperty)
+    public class var textProperty : WinUI.DependencyProperty! {
+        get { try! _ISelectorBarItemStatics.get_TextProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbaritem.icon)
+    public var icon : IconElement! {
+        get { try! _default.get_Icon() }
+        set { try! _default.put_Icon(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbaritem.text)
+    public var text : String {
+        get { try! _default.get_Text() }
+        set { try! _default.put_Text(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.selectorbarselectionchangedeventargs)
+public final class SelectorBarSelectionChangedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ISelectorBarSelectionChangedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CISelectorBarSelectionChangedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.semanticzoom)
 public final class SemanticZoom : WinUI.Control {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ISemanticZoom
@@ -14491,6 +15468,921 @@ open class SwapChainPanel : WinUI.Grid {
        }
       )
     }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview)
+open class TabView : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabView
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabView
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITabViewFactory : __ABI_Microsoft_UI_Xaml_Controls.ITabViewFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabView")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.TabViewBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITabViewFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITabViewStatics: __ABI_Microsoft_UI_Xaml_Controls.ITabViewStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabView")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.addtabbuttoncommandparameterproperty)
+    public class var addTabButtonCommandParameterProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_AddTabButtonCommandParameterProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.addtabbuttoncommandproperty)
+    public class var addTabButtonCommandProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_AddTabButtonCommandProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.allowdroptabsproperty)
+    public class var allowDropTabsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_AllowDropTabsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.candragtabsproperty)
+    public class var canDragTabsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_CanDragTabsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.canreordertabsproperty)
+    public class var canReorderTabsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_CanReorderTabsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.closebuttonoverlaymodeproperty)
+    public class var closeButtonOverlayModeProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_CloseButtonOverlayModeProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.isaddtabbuttonvisibleproperty)
+    public class var isAddTabButtonVisibleProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_IsAddTabButtonVisibleProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.selectedindexproperty)
+    public class var selectedIndexProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_SelectedIndexProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.selecteditemproperty)
+    public class var selectedItemProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_SelectedItemProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemtemplateproperty)
+    public class var tabItemTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabItemTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemtemplateselectorproperty)
+    public class var tabItemTemplateSelectorProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabItemTemplateSelectorProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemsproperty)
+    public class var tabItemsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabItemsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemssourceproperty)
+    public class var tabItemsSourceProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabItemsSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripfooterproperty)
+    public class var tabStripFooterProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabStripFooterProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripfootertemplateproperty)
+    public class var tabStripFooterTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabStripFooterTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripheaderproperty)
+    public class var tabStripHeaderProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabStripHeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripheadertemplateproperty)
+    public class var tabStripHeaderTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabStripHeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabwidthmodeproperty)
+    public class var tabWidthModeProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics.get_TabWidthModeProperty() }
+    }
+
+    private static let _ITabViewStatics2: __ABI_Microsoft_UI_Xaml_Controls.ITabViewStatics2 = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabView")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.cantearouttabsproperty)
+    public class var canTearOutTabsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewStatics2.get_CanTearOutTabsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.containerfromitem)
+    public func containerFromItem(_ item: Any!) throws -> WinUI.DependencyObject! {
+        try _default.ContainerFromItem(item)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.containerfromindex)
+    public func containerFromIndex(_ index: Int32) throws -> WinUI.DependencyObject! {
+        try _default.ContainerFromIndex(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.addtabbuttoncommand)
+    public var addTabButtonCommand : WinUI.AnyICommand! {
+        get { try! _default.get_AddTabButtonCommand() }
+        set { try! _default.put_AddTabButtonCommand(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.addtabbuttoncommandparameter)
+    public var addTabButtonCommandParameter : Any! {
+        get { try! _default.get_AddTabButtonCommandParameter() }
+        set { try! _default.put_AddTabButtonCommandParameter(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.allowdroptabs)
+    public var allowDropTabs : Bool {
+        get { try! _default.get_AllowDropTabs() }
+        set { try! _default.put_AllowDropTabs(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.candragtabs)
+    public var canDragTabs : Bool {
+        get { try! _default.get_CanDragTabs() }
+        set { try! _default.put_CanDragTabs(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.canreordertabs)
+    public var canReorderTabs : Bool {
+        get { try! _default.get_CanReorderTabs() }
+        set { try! _default.put_CanReorderTabs(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.closebuttonoverlaymode)
+    public var closeButtonOverlayMode : TabViewCloseButtonOverlayMode {
+        get { try! _default.get_CloseButtonOverlayMode() }
+        set { try! _default.put_CloseButtonOverlayMode(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.isaddtabbuttonvisible)
+    public var isAddTabButtonVisible : Bool {
+        get { try! _default.get_IsAddTabButtonVisible() }
+        set { try! _default.put_IsAddTabButtonVisible(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.selectedindex)
+    public var selectedIndex : Int32 {
+        get { try! _default.get_SelectedIndex() }
+        set { try! _default.put_SelectedIndex(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.selecteditem)
+    public var selectedItem : Any! {
+        get { try! _default.get_SelectedItem() }
+        set { try! _default.put_SelectedItem(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemtemplate)
+    public var tabItemTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_TabItemTemplate() }
+        set { try! _default.put_TabItemTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemtemplateselector)
+    public var tabItemTemplateSelector : DataTemplateSelector! {
+        get { try! _default.get_TabItemTemplateSelector() }
+        set { try! _default.put_TabItemTemplateSelector(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitems)
+    public var tabItems : WindowsFoundation.AnyIVector<Any?>! {
+        get { try! _default.get_TabItems() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemssource)
+    public var tabItemsSource : Any! {
+        get { try! _default.get_TabItemsSource() }
+        set { try! _default.put_TabItemsSource(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripfooter)
+    public var tabStripFooter : Any! {
+        get { try! _default.get_TabStripFooter() }
+        set { try! _default.put_TabStripFooter(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripfootertemplate)
+    public var tabStripFooterTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_TabStripFooterTemplate() }
+        set { try! _default.put_TabStripFooterTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripheader)
+    public var tabStripHeader : Any! {
+        get { try! _default.get_TabStripHeader() }
+        set { try! _default.put_TabStripHeader(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripheadertemplate)
+    public var tabStripHeaderTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_TabStripHeaderTemplate() }
+        set { try! _default.put_TabStripHeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabwidthmode)
+    public var tabWidthMode : TabViewWidthMode {
+        get { try! _default.get_TabWidthMode() }
+        set { try! _default.put_TabWidthMode(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.addtabbuttonclick)
+    public lazy var addTabButtonClick : Event<TypedEventHandler<TabView?, Any?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_AddTabButtonClick($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_AddTabButtonClick($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.selectionchanged)
+    public lazy var selectionChanged : Event<SelectionChangedEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_SelectionChanged($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_SelectionChanged($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabcloserequested)
+    public lazy var tabCloseRequested : Event<TypedEventHandler<TabView?, TabViewTabCloseRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabCloseRequested($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabCloseRequested($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabdragcompleted)
+    public lazy var tabDragCompleted : Event<TypedEventHandler<TabView?, TabViewTabDragCompletedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabDragCompleted($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabDragCompleted($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabdragstarting)
+    public lazy var tabDragStarting : Event<TypedEventHandler<TabView?, TabViewTabDragStartingEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabDragStarting($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabDragStarting($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabdroppedoutside)
+    public lazy var tabDroppedOutside : Event<TypedEventHandler<TabView?, TabViewTabDroppedOutsideEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabDroppedOutside($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabDroppedOutside($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabitemschanged)
+    public lazy var tabItemsChanged : Event<TypedEventHandler<TabView?, IVectorChangedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabItemsChanged($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabItemsChanged($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripdragover)
+    public lazy var tabStripDragOver : Event<WinUI.DragEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabStripDragOver($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabStripDragOver($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabstripdrop)
+    public lazy var tabStripDrop : Event<WinUI.DragEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_TabStripDrop($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_TabStripDrop($0)
+       }
+      )
+    }()
+
+    private lazy var _ITabView2: __ABI_Microsoft_UI_Xaml_Controls.ITabView2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.cantearouttabs)
+    public var canTearOutTabs : Bool {
+        get { try! _ITabView2.get_CanTearOutTabs() }
+        set { try! _ITabView2.put_CanTearOutTabs(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.externaltornouttabsdropped)
+    public lazy var externalTornOutTabsDropped : Event<TypedEventHandler<TabView?, TabViewExternalTornOutTabsDroppedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._ITabView2 else { return .init() }
+          return try! this.add_ExternalTornOutTabsDropped($0)
+        },
+        remove: { [weak self] in
+         try? self?._ITabView2.remove_ExternalTornOutTabsDropped($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.externaltornouttabsdropping)
+    public lazy var externalTornOutTabsDropping : Event<TypedEventHandler<TabView?, TabViewExternalTornOutTabsDroppingEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._ITabView2 else { return .init() }
+          return try! this.add_ExternalTornOutTabsDropping($0)
+        },
+        remove: { [weak self] in
+         try? self?._ITabView2.remove_ExternalTornOutTabsDropping($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabtearoutrequested)
+    public lazy var tabTearOutRequested : Event<TypedEventHandler<TabView?, TabViewTabTearOutRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._ITabView2 else { return .init() }
+          return try! this.add_TabTearOutRequested($0)
+        },
+        remove: { [weak self] in
+         try? self?._ITabView2.remove_TabTearOutRequested($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabview.tabtearoutwindowrequested)
+    public lazy var tabTearOutWindowRequested : Event<TypedEventHandler<TabView?, TabViewTabTearOutWindowRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._ITabView2 else { return .init() }
+          return try! this.add_TabTearOutWindowRequested($0)
+        },
+        remove: { [weak self] in
+         try? self?._ITabView2.remove_TabTearOutWindowRequested($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+        _ITabView2 = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppedeventargs)
+public final class TabViewExternalTornOutTabsDroppedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewExternalTornOutTabsDroppedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewExternalTornOutTabsDroppedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppedeventargs.dropindex)
+    public var dropIndex : Int32 {
+        get { try! _default.get_DropIndex() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppedeventargs.items)
+    public var items : [Any?] {
+        get { try! _default.get_Items() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppedeventargs.tabs)
+    public var tabs : [WinUI.UIElement?] {
+        get { try! _default.get_Tabs() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppingeventargs)
+public final class TabViewExternalTornOutTabsDroppingEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewExternalTornOutTabsDroppingEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewExternalTornOutTabsDroppingEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppingeventargs.allowdrop)
+    public var allowDrop : Bool {
+        get { try! _default.get_AllowDrop() }
+        set { try! _default.put_AllowDrop(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppingeventargs.dropindex)
+    public var dropIndex : Int32 {
+        get { try! _default.get_DropIndex() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppingeventargs.items)
+    public var items : [Any?] {
+        get { try! _default.get_Items() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewexternaltornouttabsdroppingeventargs.tabs)
+    public var tabs : [WinUI.UIElement?] {
+        get { try! _default.get_Tabs() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem)
+open class TabViewItem : WinUI.ListViewItem {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewItem
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewItem
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITabViewItemFactory : __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabViewItem")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.TabViewItemBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITabViewItemFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITabViewItemStatics: __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabViewItem")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.headerproperty)
+    public class var headerProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemStatics.get_HeaderProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.headertemplateproperty)
+    public class var headerTemplateProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemStatics.get_HeaderTemplateProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.iconsourceproperty)
+    public class var iconSourceProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemStatics.get_IconSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.isclosableproperty)
+    public class var isClosableProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemStatics.get_IsClosableProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.tabviewtemplatesettingsproperty)
+    public class var tabViewTemplateSettingsProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemStatics.get_TabViewTemplateSettingsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.header)
+    public var header : Any! {
+        get { try! _default.get_Header() }
+        set { try! _default.put_Header(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.headertemplate)
+    public var headerTemplate : WinUI.DataTemplate! {
+        get { try! _default.get_HeaderTemplate() }
+        set { try! _default.put_HeaderTemplate(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.iconsource)
+    public var iconSource : IconSource! {
+        get { try! _default.get_IconSource() }
+        set { try! _default.put_IconSource(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.isclosable)
+    public var isClosable : Bool {
+        get { try! _default.get_IsClosable() }
+        set { try! _default.put_IsClosable(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.tabviewtemplatesettings)
+    public var tabViewTemplateSettings : TabViewItemTemplateSettings! {
+        get { try! _default.get_TabViewTemplateSettings() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitem.closerequested)
+    public lazy var closeRequested : Event<TypedEventHandler<TabViewItem?, TabViewTabCloseRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_CloseRequested($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_CloseRequested($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitemtemplatesettings)
+open class TabViewItemTemplateSettings : WinUI.DependencyObject {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemTemplateSettings
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewItemTemplateSettings
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITabViewItemTemplateSettingsFactory : __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemTemplateSettingsFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.TabViewItemTemplateSettingsBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITabViewItemTemplateSettingsFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITabViewItemTemplateSettingsStatics: __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemTemplateSettingsStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitemtemplatesettings.iconelementproperty)
+    public class var iconElementProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemTemplateSettingsStatics.get_IconElementProperty() }
+    }
+
+    private static let _ITabViewItemTemplateSettingsStatics2: __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemTemplateSettingsStatics2 = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitemtemplatesettings.tabgeometryproperty)
+    public class var tabGeometryProperty : WinUI.DependencyProperty! {
+        get { try! _ITabViewItemTemplateSettingsStatics2.get_TabGeometryProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitemtemplatesettings.iconelement)
+    public var iconElement : IconElement! {
+        get { try! _default.get_IconElement() }
+        set { try! _default.put_IconElement(newValue) }
+    }
+
+    private lazy var _ITabViewItemTemplateSettings2: __ABI_Microsoft_UI_Xaml_Controls.ITabViewItemTemplateSettings2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewitemtemplatesettings.tabgeometry)
+    public var tabGeometry : WinUI.Geometry! {
+        get { try! _ITabViewItemTemplateSettings2.get_TabGeometry() }
+        set { try! _ITabViewItemTemplateSettings2.put_TabGeometry(newValue) }
+    }
+
+    deinit {
+        _default = nil
+        _ITabViewItemTemplateSettings2 = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabcloserequestedeventargs)
+public final class TabViewTabCloseRequestedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabCloseRequestedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabCloseRequestedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabcloserequestedeventargs.item)
+    public var item : Any! {
+        get { try! _default.get_Item() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabcloserequestedeventargs.tab)
+    public var tab : TabViewItem! {
+        get { try! _default.get_Tab() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragcompletedeventargs)
+public final class TabViewTabDragCompletedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabDragCompletedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabDragCompletedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragcompletedeventargs.dropresult)
+    public var dropResult : UWP.DataPackageOperation {
+        get { try! _default.get_DropResult() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragcompletedeventargs.item)
+    public var item : Any! {
+        get { try! _default.get_Item() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragcompletedeventargs.tab)
+    public var tab : TabViewItem! {
+        get { try! _default.get_Tab() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragstartingeventargs)
+public final class TabViewTabDragStartingEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabDragStartingEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabDragStartingEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragstartingeventargs.cancel)
+    public var cancel : Bool {
+        get { try! _default.get_Cancel() }
+        set { try! _default.put_Cancel(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragstartingeventargs.data)
+    public var data : UWP.DataPackage! {
+        get { try! _default.get_Data() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragstartingeventargs.item)
+    public var item : Any! {
+        get { try! _default.get_Item() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdragstartingeventargs.tab)
+    public var tab : TabViewItem! {
+        get { try! _default.get_Tab() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdroppedoutsideeventargs)
+public final class TabViewTabDroppedOutsideEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabDroppedOutsideEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabDroppedOutsideEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdroppedoutsideeventargs.item)
+    public var item : Any! {
+        get { try! _default.get_Item() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabdroppedoutsideeventargs.tab)
+    public var tab : TabViewItem! {
+        get { try! _default.get_Tab() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutrequestedeventargs)
+public final class TabViewTabTearOutRequestedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabTearOutRequestedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabTearOutRequestedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutrequestedeventargs.items)
+    public var items : [Any?] {
+        get { try! _default.get_Items() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutrequestedeventargs.newwindowid)
+    public var newWindowId : WinAppSDK.WindowId {
+        get { try! _default.get_NewWindowId() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutrequestedeventargs.tabs)
+    public var tabs : [WinUI.UIElement?] {
+        get { try! _default.get_Tabs() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutwindowrequestedeventargs)
+public final class TabViewTabTearOutWindowRequestedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.ITabViewTabTearOutWindowRequestedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CITabViewTabTearOutWindowRequestedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutwindowrequestedeventargs.items)
+    public var items : [Any?] {
+        get { try! _default.get_Items() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutwindowrequestedeventargs.newwindowid)
+    public var newWindowId : WinAppSDK.WindowId {
+        get { try! _default.get_NewWindowId() }
+        set { try! _default.put_NewWindowId(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewtabtearoutwindowrequestedeventargs.tabs)
+    public var tabs : [WinUI.UIElement?] {
+        get { try! _default.get_Tabs() }
+    }
 
     deinit {
         _default = nil
@@ -18608,6 +20500,16 @@ extension WinUI.ElementRealizationOptions {
 }
 extension WinUI.ElementRealizationOptions: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
+extension WinUI.ExpandDirection {
+    public static var down : WinUI.ExpandDirection {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CExpandDirection_Down
+    }
+    public static var up : WinUI.ExpandDirection {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CExpandDirection_Up
+    }
+}
+extension WinUI.ExpandDirection: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
 extension WinUI.IncrementalLoadingTrigger {
     public static var none : WinUI.IncrementalLoadingTrigger {
         __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger_None
@@ -18861,6 +20763,32 @@ extension WinUI.PipsPagerWrapMode {
     }
 }
 extension WinUI.PipsPagerWrapMode: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.PivotHeaderFocusVisualPlacement {
+    public static var itemHeaders : WinUI.PivotHeaderFocusVisualPlacement {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotHeaderFocusVisualPlacement_ItemHeaders
+    }
+    public static var selectedItemHeader : WinUI.PivotHeaderFocusVisualPlacement {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotHeaderFocusVisualPlacement_SelectedItemHeader
+    }
+}
+extension WinUI.PivotHeaderFocusVisualPlacement: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.PivotSlideInAnimationGroup {
+    public static var `default` : WinUI.PivotSlideInAnimationGroup {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotSlideInAnimationGroup_Default
+    }
+    public static var groupOne : WinUI.PivotSlideInAnimationGroup {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotSlideInAnimationGroup_GroupOne
+    }
+    public static var groupTwo : WinUI.PivotSlideInAnimationGroup {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotSlideInAnimationGroup_GroupTwo
+    }
+    public static var groupThree : WinUI.PivotSlideInAnimationGroup {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CPivotSlideInAnimationGroup_GroupThree
+    }
+}
+extension WinUI.PivotSlideInAnimationGroup: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinUI.RefreshPullDirection {
     public static var leftToRight : WinUI.RefreshPullDirection {
@@ -19161,6 +21089,32 @@ extension WinUI.SplitViewPanePlacement {
     }
 }
 extension WinUI.SplitViewPanePlacement: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.TabViewCloseButtonOverlayMode {
+    public static var auto : WinUI.TabViewCloseButtonOverlayMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewCloseButtonOverlayMode_Auto
+    }
+    public static var onPointerOver : WinUI.TabViewCloseButtonOverlayMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewCloseButtonOverlayMode_OnPointerOver
+    }
+    public static var always : WinUI.TabViewCloseButtonOverlayMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewCloseButtonOverlayMode_Always
+    }
+}
+extension WinUI.TabViewCloseButtonOverlayMode: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.TabViewWidthMode {
+    public static var equal : WinUI.TabViewWidthMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewWidthMode_Equal
+    }
+    public static var sizeToContent : WinUI.TabViewWidthMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewWidthMode_SizeToContent
+    }
+    public static var compact : WinUI.TabViewWidthMode {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewWidthMode_Compact
+    }
+}
+extension WinUI.TabViewWidthMode: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinUI.TeachingTipCloseReason {
     public static var closeButton : WinUI.TeachingTipCloseReason {
