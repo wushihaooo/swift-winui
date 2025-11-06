@@ -1304,6 +1304,27 @@ public enum __IMPL_Microsoft_UI_Xaml_Controls {
         public typealias Composable = IFrameworkElementOverrides
     }
 
+    public enum ImageIconSourceBridge: ComposableBridge {
+        public typealias SwiftProjection = ImageIconSource
+        public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource
+        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource>?) -> ImageIconSource? {
+            guard let abi = abi else { return nil }
+            return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+        }
+        public enum IIconSourceOverrides : ComposableImpl {
+            public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIIconSourceOverrides
+            public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IIconSourceOverrides
+            public typealias Class = ImageIconSource
+            public typealias SwiftProjection = WinRTClassWeakReference<Class>
+            public enum Default : AbiInterface {
+                public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource
+                public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IImageIconSource
+            }
+        }
+        @_spi(WinRTInternal)
+        public typealias Composable = IIconSourceOverrides
+    }
+
     public enum InfoBadgeBridge: ComposableBridge {
         public typealias SwiftProjection = InfoBadge
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIInfoBadge
@@ -2202,6 +2223,36 @@ public enum __IMPL_Microsoft_UI_Xaml_Controls {
         public typealias SwiftProjection = PasswordBoxPasswordChangingEventArgs
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPasswordBoxPasswordChangingEventArgs
         public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPasswordBoxPasswordChangingEventArgs>?) -> PasswordBoxPasswordChangingEventArgs? {
+            guard let abi = abi else { return nil }
+            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+        }
+    }
+
+    public enum PersonPictureBridge: ComposableBridge {
+        public typealias SwiftProjection = PersonPicture
+        public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture
+        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture>?) -> PersonPicture? {
+            guard let abi = abi else { return nil }
+            return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+        }
+        public enum IControlOverrides : ComposableImpl {
+            public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides
+            public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IControlOverrides
+            public typealias Class = PersonPicture
+            public typealias SwiftProjection = WinRTClassWeakReference<Class>
+            public enum Default : AbiInterface {
+                public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture
+                public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPersonPicture
+            }
+        }
+        @_spi(WinRTInternal)
+        public typealias Composable = IControlOverrides
+    }
+
+    public enum PersonPictureTemplateSettingsBridge: AbiBridge {
+        public typealias SwiftProjection = PersonPictureTemplateSettings
+        public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings
+        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings>?) -> PersonPictureTemplateSettings? {
             guard let abi = abi else { return nil }
             return .init(fromAbi: WindowsFoundation.IInspectable(abi))
         }
@@ -4057,6 +4108,13 @@ public class ImageIconMaker: MakeFromAbi {
     }
 }
 @_spi(WinRTInternal)
+public class ImageIconSourceMaker: MakeFromAbi {
+    public typealias SwiftType = ImageIconSource
+    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
+        return ImageIconSource(fromAbi: abi)
+    }
+}
+@_spi(WinRTInternal)
 public class InfoBadgeMaker: MakeFromAbi {
     public typealias SwiftType = InfoBadge
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
@@ -4439,6 +4497,20 @@ public class PasswordBoxPasswordChangingEventArgsMaker: MakeFromAbi {
     public typealias SwiftType = PasswordBoxPasswordChangingEventArgs
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return PasswordBoxPasswordChangingEventArgs(fromAbi: abi)
+    }
+}
+@_spi(WinRTInternal)
+public class PersonPictureMaker: MakeFromAbi {
+    public typealias SwiftType = PersonPicture
+    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
+        return PersonPicture(fromAbi: abi)
+    }
+}
+@_spi(WinRTInternal)
+public class PersonPictureTemplateSettingsMaker: MakeFromAbi {
+    public typealias SwiftType = PersonPictureTemplateSettings
+    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
+        return PersonPictureTemplateSettings(fromAbi: abi)
     }
 }
 @_spi(WinRTInternal)

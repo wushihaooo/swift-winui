@@ -5404,6 +5404,59 @@ open class ImageIcon : WinUI.IconElement {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.imageiconsource)
+open class ImageIconSource : WinUI.IconSource {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IImageIconSource
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IImageIconSourceFactory : __ABI_Microsoft_UI_Xaml_Controls.IImageIconSourceFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ImageIconSource")
+
+    public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.ImageIconSourceBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IImageIconSourceFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IImageIconSourceStatics: __ABI_Microsoft_UI_Xaml_Controls.IImageIconSourceStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ImageIconSource")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.imageiconsource.imagesourceproperty)
+    public class var imageSourceProperty : WinUI.DependencyProperty! {
+        get { try! _IImageIconSourceStatics.get_ImageSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.imageiconsource.imagesource)
+    public var imageSource : WinUI.ImageSource! {
+        get { try! _default.get_ImageSource() }
+        set { try! _default.put_ImageSource(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.infobadge)
 open class InfoBadge : WinUI.Control {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IInfoBadge
@@ -10703,6 +10756,196 @@ public final class PasswordBoxPasswordChangingEventArgs : WinRTClass {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.passwordboxpasswordchangingeventargs.iscontentchanging)
     public var isContentChanging : Bool {
         get { try! _default.get_IsContentChanging() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture)
+open class PersonPicture : WinUI.Control {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPersonPicture
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _IPersonPictureFactory : __ABI_Microsoft_UI_Xaml_Controls.IPersonPictureFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.PersonPicture")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Controls.PersonPictureBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._IPersonPictureFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _IPersonPictureStatics: __ABI_Microsoft_UI_Xaml_Controls.IPersonPictureStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.PersonPicture")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgeglyphproperty)
+    public class var badgeGlyphProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_BadgeGlyphProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgeimagesourceproperty)
+    public class var badgeImageSourceProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_BadgeImageSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgenumberproperty)
+    public class var badgeNumberProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_BadgeNumberProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgetextproperty)
+    public class var badgeTextProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_BadgeTextProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.contactproperty)
+    public class var contactProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_ContactProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.displaynameproperty)
+    public class var displayNameProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_DisplayNameProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.initialsproperty)
+    public class var initialsProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_InitialsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.isgroupproperty)
+    public class var isGroupProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_IsGroupProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.prefersmallimageproperty)
+    public class var preferSmallImageProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_PreferSmallImageProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.profilepictureproperty)
+    public class var profilePictureProperty : WinUI.DependencyProperty! {
+        get { try! _IPersonPictureStatics.get_ProfilePictureProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgeglyph)
+    public var badgeGlyph : String {
+        get { try! _default.get_BadgeGlyph() }
+        set { try! _default.put_BadgeGlyph(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgeimagesource)
+    public var badgeImageSource : WinUI.ImageSource! {
+        get { try! _default.get_BadgeImageSource() }
+        set { try! _default.put_BadgeImageSource(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgenumber)
+    public var badgeNumber : Int32 {
+        get { try! _default.get_BadgeNumber() }
+        set { try! _default.put_BadgeNumber(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.badgetext)
+    public var badgeText : String {
+        get { try! _default.get_BadgeText() }
+        set { try! _default.put_BadgeText(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.contact)
+    public var contact : UWP.Contact! {
+        get { try! _default.get_Contact() }
+        set { try! _default.put_Contact(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.displayname)
+    public var displayName : String {
+        get { try! _default.get_DisplayName() }
+        set { try! _default.put_DisplayName(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.initials)
+    public var initials : String {
+        get { try! _default.get_Initials() }
+        set { try! _default.put_Initials(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.isgroup)
+    public var isGroup : Bool {
+        get { try! _default.get_IsGroup() }
+        set { try! _default.put_IsGroup(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.prefersmallimage)
+    public var preferSmallImage : Bool {
+        get { try! _default.get_PreferSmallImage() }
+        set { try! _default.put_PreferSmallImage(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.profilepicture)
+    public var profilePicture : WinUI.ImageSource! {
+        get { try! _default.get_ProfilePicture() }
+        set { try! _default.put_ProfilePicture(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicture.templatesettings)
+    public var templateSettings : PersonPictureTemplateSettings! {
+        get { try! _default.get_TemplateSettings() }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicturetemplatesettings)
+public final class PersonPictureTemplateSettings : WinUI.DependencyObject {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IPersonPictureTemplateSettings
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicturetemplatesettings.actualimagebrush)
+    public var actualImageBrush : WinUI.ImageBrush! {
+        get { try! _default.get_ActualImageBrush() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.personpicturetemplatesettings.actualinitials)
+    public var actualInitials : String {
+        get { try! _default.get_ActualInitials() }
     }
 
     deinit {

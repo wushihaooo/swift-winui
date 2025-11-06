@@ -132,7 +132,9 @@
     "Microsoft.UI.Xaml.Controls.GridViewItem",
     "Microsoft.UI.Xaml.Controls.ItemsWrapGrid",
     "Microsoft.UI.Xaml.Controls.RefreshContainer",
-    "Microsoft.UI.Xaml.Controls.NavigationViewItem"
+    "Microsoft.UI.Xaml.Controls.NavigationViewItem",
+    "Microsoft.UI.Xaml.Controls.ImageIconSource",
+    "Microsoft.UI.Xaml.Controls.PersonPicture"
   ],
   "exclude": [
   ]

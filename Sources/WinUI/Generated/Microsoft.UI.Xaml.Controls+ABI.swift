@@ -518,6 +518,18 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconFactory: Windo
     .init(Data1: 0x235E0279, Data2: 0xA7D0, Data3: 0x5FDA, Data4: ( 0xA3,0x08,0x9B,0x7C,0xB9,0xC4,0xC9,0x12 ))// 235E0279-A7D0-5FDA-A308-9B7CB9C4C912
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource: WindowsFoundation.IID {
+    .init(Data1: 0x67F75BE0, Data2: 0xC84D, Data3: 0x57FF, Data4: ( 0x9F,0x68,0x03,0x9C,0x81,0xEA,0x78,0x96 ))// 67F75BE0-C84D-57FF-9F68-039C81EA7896
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceFactory: WindowsFoundation.IID {
+    .init(Data1: 0x24F76321, Data2: 0x71BD, Data3: 0x530A, Data4: ( 0x8C,0xC8,0x3F,0x61,0x5C,0xD1,0x43,0x7A ))// 24F76321-71BD-530A-8CC8-3F615CD1437A
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceStatics: WindowsFoundation.IID {
+    .init(Data1: 0x3AAE805C, Data2: 0xC128, Data3: 0x5F0D, Data4: ( 0xAE,0x43,0x1B,0x15,0x88,0x91,0xA1,0xDD ))// 3AAE805C-C128-5F0D-AE43-1B158891A1DD
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconStatics: WindowsFoundation.IID {
     .init(Data1: 0x6BD31828, Data2: 0xF8F9, Data3: 0x5D86, Data4: ( 0x80,0xD5,0xE7,0x42,0x35,0x46,0xDA,0x7D ))// 6BD31828-F8F9-5D86-80D5-E7423546DA7D
 }
@@ -1072,6 +1084,22 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPasswordBoxPasswordChan
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPasswordBoxStatics: WindowsFoundation.IID {
     .init(Data1: 0x90E6559C, Data2: 0x5F74, Data3: 0x5CD1, Data4: ( 0x87,0xB6,0xC0,0x51,0x40,0x85,0xAB,0x42 ))// 90E6559C-5F74-5CD1-87B6-C0514085AB42
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture: WindowsFoundation.IID {
+    .init(Data1: 0x30EC982C, Data2: 0x0EFA, Data3: 0x5538, Data4: ( 0xA3,0x56,0xE9,0xEB,0xD5,0xAA,0x36,0x3C ))// 30EC982C-0EFA-5538-A356-E9EBD5AA363C
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureFactory: WindowsFoundation.IID {
+    .init(Data1: 0x7EC0794C, Data2: 0xF2CC, Data3: 0x5282, Data4: ( 0xA8,0x9D,0xCD,0x3B,0xB7,0x65,0xB7,0x1A ))// 7EC0794C-F2CC-5282-A89D-CD3BB765B71A
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics: WindowsFoundation.IID {
+    .init(Data1: 0x3C769423, Data2: 0x9B05, Data3: 0x56C1, Data4: ( 0xA1,0x69,0x09,0x84,0x93,0xC2,0x1F,0x91 ))// 3C769423-9B05-56C1-A169-098493C21F91
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings: WindowsFoundation.IID {
+    .init(Data1: 0xE16DF12F, Data2: 0xC3C0, Data3: 0x5F26, Data4: ( 0xA3,0x81,0x08,0xF2,0xDF,0x05,0x2F,0x29 ))// E16DF12F-C3C0-5F26-A381-08F2DF052F29
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPipsPager: WindowsFoundation.IID {
@@ -8596,6 +8624,58 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
 
     }
 
+    public class IImageIconSource: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource }
+
+        public func get_ImageSource() throws -> WinUI.ImageSource? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSource(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Media.ImageSourceBridge.from(abi: value)
+        }
+
+        public func put_ImageSource(_ value: WinUI.ImageSource?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSource.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ImageSource(pThis, RawPointer(value)))
+            }
+        }
+
+    }
+
+    public class IImageIconSourceFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceFactory }
+
+        public func CreateInstance(_ baseInterface: UnsealedWinRTClassWrapper<__IMPL_Microsoft_UI_Xaml_Controls.ImageIconSourceBridge.Composable>?, _ innerInterface: inout WindowsFoundation.IInspectable?) throws -> IImageIconSource {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                let _baseInterface = baseInterface?.toIInspectableABI { $0 }
+                let (_innerInterface) = try ComPtrs.initialize { _innerInterfaceAbi in
+                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceFactory.self) { pThis in
+                        try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, _baseInterface, &_innerInterfaceAbi, &valueAbi))
+                    }
+                }
+                innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
+            }
+            return IImageIconSource(value!)
+        }
+
+    }
+
+    public class IImageIconSourceStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceStatics }
+
+        public func get_ImageSourceProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconSourceStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSourceProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+    }
+
     public class IImageIconStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIImageIconStatics }
 
@@ -15893,6 +15973,302 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
                 }
             }
             return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+    }
+
+    public class IPersonPicture: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture }
+
+        public func get_BadgeNumber() throws -> Int32 {
+            var value: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeNumber(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_BadgeNumber(_ value: Int32) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_BadgeNumber(pThis, value))
+            }
+        }
+
+        public func get_BadgeGlyph() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeGlyph(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_BadgeGlyph(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_BadgeGlyph(pThis, _value.get()))
+            }
+        }
+
+        public func get_BadgeImageSource() throws -> WinUI.ImageSource? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeImageSource(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Media.ImageSourceBridge.from(abi: value)
+        }
+
+        public func put_BadgeImageSource(_ value: WinUI.ImageSource?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_BadgeImageSource(pThis, RawPointer(value)))
+            }
+        }
+
+        public func get_BadgeText() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeText(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_BadgeText(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_BadgeText(pThis, _value.get()))
+            }
+        }
+
+        public func get_IsGroup() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsGroup(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_IsGroup(_ value: Bool) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsGroup(pThis, .init(from: value)))
+            }
+        }
+
+        public func get_Contact() throws -> UWP.Contact? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Contact(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Windows_ApplicationModel_Contacts.ContactBridge.from(abi: value)
+        }
+
+        public func put_Contact(_ value: UWP.Contact?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Contact(pThis, RawPointer(value)))
+            }
+        }
+
+        public func get_DisplayName() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayName(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_DisplayName(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayName(pThis, _value.get()))
+            }
+        }
+
+        public func get_Initials() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Initials(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_Initials(_ value: String) throws {
+            let _value = try! HString(value)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Initials(pThis, _value.get()))
+            }
+        }
+
+        public func get_PreferSmallImage() throws -> Bool {
+            var value: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferSmallImage(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func put_PreferSmallImage(_ value: Bool) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferSmallImage(pThis, .init(from: value)))
+            }
+        }
+
+        public func get_ProfilePicture() throws -> WinUI.ImageSource? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProfilePicture(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Media.ImageSourceBridge.from(abi: value)
+        }
+
+        public func put_ProfilePicture(_ value: WinUI.ImageSource?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProfilePicture(pThis, RawPointer(value)))
+            }
+        }
+
+        public func get_TemplateSettings() throws -> WinUI.PersonPictureTemplateSettings? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPicture.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_TemplateSettings(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Controls.PersonPictureTemplateSettingsBridge.from(abi: value)
+        }
+
+    }
+
+    public class IPersonPictureFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureFactory }
+
+        public func CreateInstance(_ baseInterface: UnsealedWinRTClassWrapper<__IMPL_Microsoft_UI_Xaml_Controls.PersonPictureBridge.Composable>?, _ innerInterface: inout WindowsFoundation.IInspectable?) throws -> IPersonPicture {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                let _baseInterface = baseInterface?.toIInspectableABI { $0 }
+                let (_innerInterface) = try ComPtrs.initialize { _innerInterfaceAbi in
+                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureFactory.self) { pThis in
+                        try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, _baseInterface, &_innerInterfaceAbi, &valueAbi))
+                    }
+                }
+                innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
+            }
+            return IPersonPicture(value!)
+        }
+
+    }
+
+    public class IPersonPictureStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics }
+
+        public func get_BadgeNumberProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeNumberProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_BadgeGlyphProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeGlyphProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_BadgeImageSourceProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeImageSourceProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_BadgeTextProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_BadgeTextProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_IsGroupProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsGroupProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_ContactProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContactProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_DisplayNameProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayNameProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_InitialsProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_InitialsProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_PreferSmallImageProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferSmallImageProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_ProfilePictureProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProfilePictureProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+    }
+
+    public class IPersonPictureTemplateSettings: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings }
+
+        public func get_ActualInitials() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualInitials(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func get_ActualImageBrush() throws -> WinUI.ImageBrush? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIPersonPictureTemplateSettings.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualImageBrush(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Media.ImageBrushBridge.from(abi: value)
         }
 
     }

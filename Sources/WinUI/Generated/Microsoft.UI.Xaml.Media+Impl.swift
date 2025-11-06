@@ -198,6 +198,15 @@ public enum __IMPL_Microsoft_UI_Xaml_Media {
         }
     }
 
+    public enum ImageBrushBridge: AbiBridge {
+        public typealias SwiftProjection = ImageBrush
+        public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush
+        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush>?) -> ImageBrush? {
+            guard let abi = abi else { return nil }
+            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+        }
+    }
+
     public enum ImageSourceBridge: ComposableBridge {
         public typealias SwiftProjection = ImageSource
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageSource
@@ -453,6 +462,27 @@ public enum __IMPL_Microsoft_UI_Xaml_Media {
         public typealias Composable = IThemeShadow
     }
 
+    public enum TileBrushBridge: ComposableBridge {
+        public typealias SwiftProjection = TileBrush
+        public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush
+        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush>?) -> TileBrush? {
+            guard let abi = abi else { return nil }
+            return UnsealedWinRTClassWrapper<Composable>.unwrapFrom(base: abi)
+        }
+        public enum IBrushOverrides : ComposableImpl {
+            public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides
+            public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Media.IBrushOverrides
+            public typealias Class = TileBrush
+            public typealias SwiftProjection = WinRTClassWeakReference<Class>
+            public enum Default : AbiInterface {
+                public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush
+                public typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Media.ITileBrush
+            }
+        }
+        @_spi(WinRTInternal)
+        public typealias Composable = IBrushOverrides
+    }
+
     public enum TransformBridge: ComposableBridge {
         public typealias SwiftProjection = Transform
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITransform
@@ -620,6 +650,13 @@ public class GradientStopCollectionMaker: MakeFromAbi {
     }
 }
 @_spi(WinRTInternal)
+public class ImageBrushMaker: MakeFromAbi {
+    public typealias SwiftType = ImageBrush
+    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
+        return ImageBrush(fromAbi: abi)
+    }
+}
+@_spi(WinRTInternal)
 public class ImageSourceMaker: MakeFromAbi {
     public typealias SwiftType = ImageSource
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
@@ -750,6 +787,13 @@ public class ThemeShadowMaker: MakeFromAbi {
     public typealias SwiftType = ThemeShadow
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return ThemeShadow(fromAbi: abi)
+    }
+}
+@_spi(WinRTInternal)
+public class TileBrushMaker: MakeFromAbi {
+    public typealias SwiftType = TileBrush
+    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
+        return TileBrush(fromAbi: abi)
     }
 }
 @_spi(WinRTInternal)

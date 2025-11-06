@@ -6,6 +6,10 @@ import Foundation
 @_spi(WinRTInternal) @_spi(WinRTImplements) import WindowsFoundation
 import CWinRT
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.alignmentx)
+public typealias AlignmentX = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.alignmenty)
+public typealias AlignmentY = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.brushmappingmode)
 public typealias BrushMappingMode = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.colorinterpolationmode)
@@ -1033,6 +1037,72 @@ public final class GradientStopCollection : WinRTClass, IVector, IIterable {
     deinit {
         _default = nil
         _IIterable = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.imagebrush)
+public final class ImageBrush : WinUI.TileBrush {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Media.IImageBrush
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    private static let _defaultFactory: WindowsFoundation.IActivationFactory = try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.ImageBrush")
+    override public init() {
+        super.init(fromAbi: try! Self._defaultFactory.ActivateInstance())
+    }
+
+    private static let _IImageBrushStatics: __ABI_Microsoft_UI_Xaml_Media.IImageBrushStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.ImageBrush")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.imagebrush.imagesourceproperty)
+    public static var imageSourceProperty : WinUI.DependencyProperty! {
+        get { try! _IImageBrushStatics.get_ImageSourceProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.imagebrush.imagesource)
+    public var imageSource : ImageSource! {
+        get { try! _default.get_ImageSource() }
+        set { try! _default.put_ImageSource(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.imagebrush.imagefailed)
+    public lazy var imageFailed : Event<WinUI.ExceptionRoutedEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_ImageFailed($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_ImageFailed($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.imagebrush.imageopened)
+    public lazy var imageOpened : Event<WinUI.RoutedEventHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._default else { return .init() }
+          return try! this.add_ImageOpened($0)
+        },
+        remove: { [weak self] in
+         try? self?._default.remove_ImageOpened($0)
+       }
+      )
+    }()
+
+    deinit {
+        _default = nil
     }
 }
 
@@ -2145,6 +2215,81 @@ open class ThemeShadow : WinUI.Shadow {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush)
+open class TileBrush : WinUI.Brush {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Media.ITileBrush
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override open func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    @_spi(WinRTInternal)
+    override public init<Composable: ComposableImpl>(
+        composing: Composable.Type,
+        _ createCallback: (UnsealedWinRTClassWrapper<Composable>?, inout WindowsFoundation.IInspectable?) -> Composable.Default.SwiftABI)
+    {
+        super.init(composing: composing, createCallback)
+    }
+    override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static var _ITileBrushFactory : __ABI_Microsoft_UI_Xaml_Media.ITileBrushFactory =  try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.TileBrush")
+
+    override public init() {
+        super.init(composing: __IMPL_Microsoft_UI_Xaml_Media.TileBrushBridge.Composable.self) { baseInterface, innerInterface in 
+            try! Self._ITileBrushFactory.CreateInstance(baseInterface, &innerInterface)
+        }
+    }
+
+    private static let _ITileBrushStatics: __ABI_Microsoft_UI_Xaml_Media.ITileBrushStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.TileBrush")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.alignmentxproperty)
+    public class var alignmentXProperty : WinUI.DependencyProperty! {
+        get { try! _ITileBrushStatics.get_AlignmentXProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.alignmentyproperty)
+    public class var alignmentYProperty : WinUI.DependencyProperty! {
+        get { try! _ITileBrushStatics.get_AlignmentYProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.stretchproperty)
+    public class var stretchProperty : WinUI.DependencyProperty! {
+        get { try! _ITileBrushStatics.get_StretchProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.alignmentx)
+    public var alignmentX : AlignmentX {
+        get { try! _default.get_AlignmentX() }
+        set { try! _default.put_AlignmentX(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.alignmenty)
+    public var alignmentY : AlignmentY {
+        get { try! _default.get_AlignmentY() }
+        set { try! _default.put_AlignmentY(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.tilebrush.stretch)
+    public var stretch : Stretch {
+        get { try! _default.get_Stretch() }
+        set { try! _default.put_Stretch(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.media.transform)
 open class Transform : WinUI.GeneralTransform {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Media.ITransform
@@ -2474,6 +2619,32 @@ open class XamlLight : WinUI.DependencyObject {
         _IXamlLightOverrides = nil
     }
 }
+
+extension WinUI.AlignmentX {
+    public static var left : WinUI.AlignmentX {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Left
+    }
+    public static var center : WinUI.AlignmentX {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Center
+    }
+    public static var right : WinUI.AlignmentX {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Right
+    }
+}
+extension WinUI.AlignmentX: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.AlignmentY {
+    public static var top : WinUI.AlignmentY {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Top
+    }
+    public static var center : WinUI.AlignmentY {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Center
+    }
+    public static var bottom : WinUI.AlignmentY {
+        __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Bottom
+    }
+}
+extension WinUI.AlignmentY: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinUI.BrushMappingMode {
     public static var absolute : WinUI.BrushMappingMode {

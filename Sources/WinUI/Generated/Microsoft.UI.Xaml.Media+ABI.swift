@@ -122,6 +122,14 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics: Windo
     .init(Data1: 0x0B566C1B, Data2: 0x37DE, Data3: 0x5BFD, Data4: ( 0xB4,0x19,0x0F,0x7C,0x4C,0x0A,0x05,0x23 ))// 0B566C1B-37DE-5BFD-B419-0F7C4C0A0523
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush: WindowsFoundation.IID {
+    .init(Data1: 0xEDCD91A3, Data2: 0xA868, Data3: 0x5BA6, Data4: ( 0x94,0x89,0x5B,0x12,0xB4,0xC2,0x9D,0x85 ))// EDCD91A3-A868-5BA6-9489-5B12B4C29D85
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics: WindowsFoundation.IID {
+    .init(Data1: 0xCE8082DC, Data2: 0xA505, Data3: 0x5B4F, Data4: ( 0x88,0x61,0x79,0x63,0x0F,0x52,0xC1,0x89 ))// CE8082DC-A505-5B4F-8861-79630F52C189
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageSource: WindowsFoundation.IID {
     .init(Data1: 0x6C2038F6, Data2: 0xD6D5, Data3: 0x55E9, Data4: ( 0x9B,0x9E,0x08,0x2F,0x12,0xDB,0xFF,0x60 ))// 6C2038F6-D6D5-55E9-9B9E-082F12DBFF60
 }
@@ -256,6 +264,18 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIThemeShadow: WindowsFounda
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIThemeShadowFactory: WindowsFoundation.IID {
     .init(Data1: 0x704A9C96, Data2: 0x76A0, Data3: 0x569E, Data4: ( 0x8C,0xEB,0x34,0xE9,0x2A,0x23,0xFE,0x11 ))// 704A9C96-76A0-569E-8CEB-34E92A23FE11
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush: WindowsFoundation.IID {
+    .init(Data1: 0xEE46060D, Data2: 0xCABC, Data3: 0x505D, Data4: ( 0x88,0x3C,0x75,0xD2,0xE0,0xE4,0x58,0x75 ))// EE46060D-CABC-505D-883C-75D2E0E45875
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory: WindowsFoundation.IID {
+    .init(Data1: 0x8542E5E6, Data2: 0x5177, Data3: 0x506F, Data4: ( 0x8A,0x3B,0xAA,0x7D,0xA6,0x51,0xF0,0x99 ))// 8542E5E6-5177-506F-8A3B-AA7DA651F099
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics: WindowsFoundation.IID {
+    .init(Data1: 0xF402197B, Data2: 0x9047, Data3: 0x5F8A, Data4: ( 0x90,0xBC,0x6F,0x5D,0x8C,0x74,0x8A,0x5F ))// F402197B-9047-5F8A-90BC-6F5D8C748A5F
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITransform: WindowsFoundation.IID {
@@ -1275,6 +1295,72 @@ public enum __ABI_Microsoft_UI_Xaml_Media {
 
     }
 
+    public class IImageBrush: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush }
+
+        public func get_ImageSource() throws -> WinUI.ImageSource? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSource(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml_Media.ImageSourceBridge.from(abi: value)
+        }
+
+        public func put_ImageSource(_ value: WinUI.ImageSource?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ImageSource(pThis, RawPointer(value)))
+            }
+        }
+
+        public func add_ImageFailed(_ handler: WinUI.ExceptionRoutedEventHandler?) throws -> EventRegistrationToken {
+            var token: EventRegistrationToken = .init()
+            let handlerWrapper = __ABI_Microsoft_UI_Xaml.ExceptionRoutedEventHandlerWrapper(handler)
+            let _handler = try! handlerWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ImageFailed(pThis, _handler, &token))
+            }
+            return token
+        }
+
+        public func remove_ImageFailed(_ token: EventRegistrationToken) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ImageFailed(pThis, token))
+            }
+        }
+
+        public func add_ImageOpened(_ handler: WinUI.RoutedEventHandler?) throws -> EventRegistrationToken {
+            var token: EventRegistrationToken = .init()
+            let handlerWrapper = __ABI_Microsoft_UI_Xaml.RoutedEventHandlerWrapper(handler)
+            let _handler = try! handlerWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ImageOpened(pThis, _handler, &token))
+            }
+            return token
+        }
+
+        public func remove_ImageOpened(_ token: EventRegistrationToken) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ImageOpened(pThis, token))
+            }
+        }
+
+    }
+
+    public class IImageBrushStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics }
+
+        public func get_ImageSourceProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSourceProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+    }
+
     public class IImageSource: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CIImageSource }
 
@@ -1882,6 +1968,103 @@ public enum __ABI_Microsoft_UI_Xaml_Media {
                 innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
             }
             return IThemeShadow(value!)
+        }
+
+    }
+
+    public class ITileBrush: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush }
+
+        public func get_AlignmentX() throws -> WinUI.AlignmentX {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentX(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_AlignmentX(_ value: WinUI.AlignmentX) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_AlignmentX(pThis, value))
+            }
+        }
+
+        public func get_AlignmentY() throws -> WinUI.AlignmentY {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentY(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_AlignmentY(_ value: WinUI.AlignmentY) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_AlignmentY(pThis, value))
+            }
+        }
+
+        public func get_Stretch() throws -> WinUI.Stretch {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CStretch = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Stretch(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_Stretch(_ value: WinUI.Stretch) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Stretch(pThis, value))
+            }
+        }
+
+    }
+
+    public class ITileBrushFactory: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory }
+
+        public func CreateInstance(_ baseInterface: UnsealedWinRTClassWrapper<__IMPL_Microsoft_UI_Xaml_Media.TileBrushBridge.Composable>?, _ innerInterface: inout WindowsFoundation.IInspectable?) throws -> ITileBrush {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                let _baseInterface = baseInterface?.toIInspectableABI { $0 }
+                let (_innerInterface) = try ComPtrs.initialize { _innerInterfaceAbi in
+                    _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory.self) { pThis in
+                        try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, _baseInterface, &_innerInterfaceAbi, &valueAbi))
+                    }
+                }
+                innerInterface = WindowsFoundation.IInspectable(_innerInterface!)
+            }
+            return ITileBrush(value!)
+        }
+
+    }
+
+    public class ITileBrushStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics }
+
+        public func get_AlignmentXProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentXProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_AlignmentYProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentYProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_StretchProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_StretchProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
         }
 
     }
