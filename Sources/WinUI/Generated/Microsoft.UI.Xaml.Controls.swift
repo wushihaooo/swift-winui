@@ -116,6 +116,8 @@ public typealias SnapPointsType = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSnapPo
 public typealias SplitViewDisplayMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSplitViewDisplayMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.splitviewpaneplacement)
 public typealias SplitViewPanePlacement = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CSplitViewPanePlacement
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.stretchdirection)
+public typealias StretchDirection = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CStretchDirection
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewclosebuttonoverlaymode)
 public typealias TabViewCloseButtonOverlayMode = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CTabViewCloseButtonOverlayMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.tabviewwidthmode)
@@ -20201,6 +20203,188 @@ open class UserControl : WinUI.Control {
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid)
+public final class VariableSizedWrapGrid : WinUI.Panel {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IVariableSizedWrapGrid
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    private static let _defaultFactory: WindowsFoundation.IActivationFactory = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid")
+    override public init() {
+        super.init(fromAbi: try! Self._defaultFactory.ActivateInstance())
+    }
+
+    private static let _IVariableSizedWrapGridStatics: __ABI_Microsoft_UI_Xaml_Controls.IVariableSizedWrapGridStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.VariableSizedWrapGrid")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.getrowspan)
+    public static func getRowSpan(_ element: WinUI.UIElement!) throws -> Int32 {
+        return try _IVariableSizedWrapGridStatics.GetRowSpan(element)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.setrowspan)
+    public static func setRowSpan(_ element: WinUI.UIElement!, _ value: Int32) throws {
+        try _IVariableSizedWrapGridStatics.SetRowSpan(element, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.getcolumnspan)
+    public static func getColumnSpan(_ element: WinUI.UIElement!) throws -> Int32 {
+        return try _IVariableSizedWrapGridStatics.GetColumnSpan(element)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.setcolumnspan)
+    public static func setColumnSpan(_ element: WinUI.UIElement!, _ value: Int32) throws {
+        try _IVariableSizedWrapGridStatics.SetColumnSpan(element, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.columnspanproperty)
+    public static var columnSpanProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_ColumnSpanProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.horizontalchildrenalignmentproperty)
+    public static var horizontalChildrenAlignmentProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_HorizontalChildrenAlignmentProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.itemheightproperty)
+    public static var itemHeightProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_ItemHeightProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.itemwidthproperty)
+    public static var itemWidthProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_ItemWidthProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumnsproperty)
+    public static var maximumRowsOrColumnsProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_MaximumRowsOrColumnsProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.orientationproperty)
+    public static var orientationProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_OrientationProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.rowspanproperty)
+    public static var rowSpanProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_RowSpanProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.verticalchildrenalignmentproperty)
+    public static var verticalChildrenAlignmentProperty : WinUI.DependencyProperty! {
+        get { try! _IVariableSizedWrapGridStatics.get_VerticalChildrenAlignmentProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.horizontalchildrenalignment)
+    public var horizontalChildrenAlignment : WinUI.HorizontalAlignment {
+        get { try! _default.get_HorizontalChildrenAlignment() }
+        set { try! _default.put_HorizontalChildrenAlignment(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.itemheight)
+    public var itemHeight : Double {
+        get { try! _default.get_ItemHeight() }
+        set { try! _default.put_ItemHeight(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.itemwidth)
+    public var itemWidth : Double {
+        get { try! _default.get_ItemWidth() }
+        set { try! _default.put_ItemWidth(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns)
+    public var maximumRowsOrColumns : Int32 {
+        get { try! _default.get_MaximumRowsOrColumns() }
+        set { try! _default.put_MaximumRowsOrColumns(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.orientation)
+    public var orientation : Orientation {
+        get { try! _default.get_Orientation() }
+        set { try! _default.put_Orientation(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.variablesizedwrapgrid.verticalchildrenalignment)
+    public var verticalChildrenAlignment : WinUI.VerticalAlignment {
+        get { try! _default.get_VerticalChildrenAlignment() }
+        set { try! _default.put_VerticalChildrenAlignment(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox)
+public final class Viewbox : WinUI.FrameworkElement {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IViewbox
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    override public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi: fromAbi)
+    }
+
+    private static let _defaultFactory: WindowsFoundation.IActivationFactory = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Viewbox")
+    override public init() {
+        super.init(fromAbi: try! Self._defaultFactory.ActivateInstance())
+    }
+
+    private static let _IViewboxStatics: __ABI_Microsoft_UI_Xaml_Controls.IViewboxStatics = try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Viewbox")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox.stretchdirectionproperty)
+    public static var stretchDirectionProperty : WinUI.DependencyProperty! {
+        get { try! _IViewboxStatics.get_StretchDirectionProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox.stretchproperty)
+    public static var stretchProperty : WinUI.DependencyProperty! {
+        get { try! _IViewboxStatics.get_StretchProperty() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox.child)
+    public var child : WinUI.UIElement! {
+        get { try! _default.get_Child() }
+        set { try! _default.put_Child(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox.stretch)
+    public var stretch : WinUI.Stretch {
+        get { try! _default.get_Stretch() }
+        set { try! _default.put_Stretch(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.viewbox.stretchdirection)
+    public var stretchDirection : StretchDirection {
+        get { try! _default.get_StretchDirection() }
+        set { try! _default.put_StretchDirection(newValue) }
+    }
+
+    deinit {
+        _default = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.xaml.controls.virtualizinglayout)
 open class VirtualizingLayout : WinUI.Layout {
     private typealias SwiftABI = __ABI_Microsoft_UI_Xaml_Controls.IVirtualizingLayout
@@ -21332,6 +21516,19 @@ extension WinUI.SplitViewPanePlacement {
     }
 }
 extension WinUI.SplitViewPanePlacement: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
+extension WinUI.StretchDirection {
+    public static var upOnly : WinUI.StretchDirection {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CStretchDirection_UpOnly
+    }
+    public static var downOnly : WinUI.StretchDirection {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CStretchDirection_DownOnly
+    }
+    public static var both : WinUI.StretchDirection {
+        __x_ABI_CMicrosoft_CUI_CXaml_CControls_CStretchDirection_Both
+    }
+}
+extension WinUI.StretchDirection: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinUI.TabViewCloseButtonOverlayMode {
     public static var auto : WinUI.TabViewCloseButtonOverlayMode {

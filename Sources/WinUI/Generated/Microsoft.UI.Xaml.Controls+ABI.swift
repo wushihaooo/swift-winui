@@ -1858,6 +1858,22 @@ private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIUserControlStatics: Win
     .init(Data1: 0x575E8FA1, Data2: 0x2E2D, Data3: 0x5857, Data4: ( 0x9A,0x93,0x6B,0x11,0xE5,0x43,0x16,0xBA ))// 575E8FA1-2E2D-5857-9A93-6B11E54316BA
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid: WindowsFoundation.IID {
+    .init(Data1: 0xBFECD12B, Data2: 0xE16A, Data3: 0x58A0, Data4: ( 0xAF,0x5F,0x46,0x72,0x62,0x74,0x62,0xD5 ))// BFECD12B-E16A-58A0-AF5F-4672627462D5
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics: WindowsFoundation.IID {
+    .init(Data1: 0x0D979FE6, Data2: 0x64AF, Data3: 0x5AF5, Data4: ( 0x91,0x4A,0xDD,0x38,0xF2,0xCC,0xF2,0xD7 ))// 0D979FE6-64AF-5AF5-914A-DD38F2CCF2D7
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox: WindowsFoundation.IID {
+    .init(Data1: 0x510683E8, Data2: 0xD0FE, Data3: 0x5EF4, Data4: ( 0x85,0xBD,0xE1,0x13,0x10,0x76,0xAC,0x22 ))// 510683E8-D0FE-5EF4-85BD-E1131076AC22
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewboxStatics: WindowsFoundation.IID {
+    .init(Data1: 0x0466C103, Data2: 0x1E17, Data3: 0x5E83, Data4: ( 0xA2,0x62,0x88,0x55,0xF2,0x16,0xB5,0x9F ))// 0466C103-1E17-5E83-A262-8855F216B59F
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVirtualizingLayout: WindowsFoundation.IID {
     .init(Data1: 0x54857CE0, Data2: 0xB9E6, Data3: 0x51A3, Data4: ( 0xBF,0xA8,0xDC,0xD8,0xEE,0x30,0x6D,0x5C ))// 54857CE0-B9E6-51A3-BFA8-DCD8EE306D5C
 }
@@ -29258,6 +29274,271 @@ public enum __ABI_Microsoft_UI_Xaml_Controls {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIUserControlStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+    }
+
+    public class IVariableSizedWrapGrid: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid }
+
+        public func get_ItemHeight() throws -> Double {
+            var value: DOUBLE = 0.0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemHeight(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_ItemHeight(_ value: Double) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemHeight(pThis, value))
+            }
+        }
+
+        public func get_ItemWidth() throws -> Double {
+            var value: DOUBLE = 0.0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemWidth(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_ItemWidth(_ value: Double) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemWidth(pThis, value))
+            }
+        }
+
+        public func get_Orientation() throws -> WinUI.Orientation {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CControls_COrientation = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orientation(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_Orientation(_ value: WinUI.Orientation) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Orientation(pThis, value))
+            }
+        }
+
+        public func get_HorizontalChildrenAlignment() throws -> WinUI.HorizontalAlignment {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CHorizontalAlignment = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalChildrenAlignment(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_HorizontalChildrenAlignment(_ value: WinUI.HorizontalAlignment) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_HorizontalChildrenAlignment(pThis, value))
+            }
+        }
+
+        public func get_VerticalChildrenAlignment() throws -> WinUI.VerticalAlignment {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CVerticalAlignment = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalChildrenAlignment(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_VerticalChildrenAlignment(_ value: WinUI.VerticalAlignment) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_VerticalChildrenAlignment(pThis, value))
+            }
+        }
+
+        public func get_MaximumRowsOrColumns() throws -> Int32 {
+            var value: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumRowsOrColumns(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_MaximumRowsOrColumns(_ value: Int32) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGrid.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaximumRowsOrColumns(pThis, value))
+            }
+        }
+
+    }
+
+    public class IVariableSizedWrapGridStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics }
+
+        public func get_ItemHeightProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemHeightProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_ItemWidthProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemWidthProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_OrientationProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_OrientationProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_HorizontalChildrenAlignmentProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalChildrenAlignmentProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_VerticalChildrenAlignmentProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalChildrenAlignmentProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_MaximumRowsOrColumnsProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumRowsOrColumnsProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_RowSpanProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowSpanProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func GetRowSpan(_ element: WinUI.UIElement?) throws -> Int32 {
+            var result: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetRowSpan(pThis, RawPointer(element), &result))
+            }
+            return result
+        }
+
+        public func SetRowSpan(_ element: WinUI.UIElement?, _ value: Int32) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetRowSpan(pThis, RawPointer(element), value))
+            }
+        }
+
+        public func get_ColumnSpanProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnSpanProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func GetColumnSpan(_ element: WinUI.UIElement?) throws -> Int32 {
+            var result: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetColumnSpan(pThis, RawPointer(element), &result))
+            }
+            return result
+        }
+
+        public func SetColumnSpan(_ element: WinUI.UIElement?, _ value: Int32) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIVariableSizedWrapGridStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetColumnSpan(pThis, RawPointer(element), value))
+            }
+        }
+
+    }
+
+    public class IViewbox: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox }
+
+        public func get_Child() throws -> WinUI.UIElement? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Child(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.UIElementBridge.from(abi: value)
+        }
+
+        public func put_Child(_ value: WinUI.UIElement?) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Child(pThis, RawPointer(value)))
+            }
+        }
+
+        public func get_Stretch() throws -> WinUI.Stretch {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CMedia_CStretch = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Stretch(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_Stretch(_ value: WinUI.Stretch) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Stretch(pThis, value))
+            }
+        }
+
+        public func get_StretchDirection() throws -> WinUI.StretchDirection {
+            var value: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CStretchDirection = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_StretchDirection(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_StretchDirection(_ value: WinUI.StretchDirection) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewbox.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_StretchDirection(pThis, value))
+            }
+        }
+
+    }
+
+    public class IViewboxStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewboxStatics }
+
+        public func get_StretchProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewboxStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_StretchProperty(pThis, &valueAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
+        }
+
+        public func get_StretchDirectionProperty() throws -> WinUI.DependencyProperty? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CXaml_CControls_CIViewboxStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_StretchDirectionProperty(pThis, &valueAbi))
                 }
             }
             return __IMPL_Microsoft_UI_Xaml.DependencyPropertyBridge.from(abi: value)
