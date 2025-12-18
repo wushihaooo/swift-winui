@@ -142,15 +142,19 @@
     "Microsoft.UI.Xaml.Controls.RichTextBlock",
     "Microsoft.UI.Xaml.Documents.Paragraph",
     "Microsoft.UI.Xaml.Controls.RichTextBlockOverflow",
-    "Microsoft.UI.Xaml.Controls.NumberBox",
     "Microsoft.UI.Xaml.Documents.Bold",
     "Microsoft.UI.Xaml.Documents.Italic",
     "Microsoft.UI.Xaml.Documents.Underline",
     "Microsoft.UI.Xaml.Documents.LineBreak",
     "Microsoft.UI.Xaml.Controls.SymbolIcon",
-    "Microsoft.UI.Xaml.Controls.ItemsStackPanel"
+    "Microsoft.UI.Xaml.Controls.ItemsStackPanel",
+    "Microsoft.UI.Xaml.Controls.DatePicker",
+    "Microsoft.UI.Xaml.Controls.TimePicker",
+    "Microsoft.UI.Xaml.Controls.CalendarView",
+    "Microsoft.UI.Xaml.Controls.CalendarDatePicker"
   ],
   "exclude": [
   ]
 }
+
 
